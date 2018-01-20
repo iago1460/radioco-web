@@ -1,0 +1,107 @@
+{% extends 'main/base.html' %}
+{% load i18n staticfiles %}
+
+{% block content %}
+
+{% get_current_language as LANGUAGE_CODE %}
+{% trans 'Installation' as header %}
+{% trans 'Follow this easy steps to get started.' as subheader %}
+{% include 'main/snippets/simple_header.html' %}
+
+{% if LANGUAGE_CODE == 'es' %}
+<section id="counter" class="front-page-section warning-section">
+    Disponemos de <a href="{% url 'documentacion_adicional' %}" title="Documentación" class="post-button"> documentación adicional en español </a>
+</section><!--/#counter.front-page-section-->
+{% endif %}
+
+{% include 'main/snippets/installation_steps.html' %}
+
+
+<section class="front-page-section counter counter-alt"
+         style="background-image: url({% static 'main/images/radioco_listen_to.png' %});">
+    <div class="counter-overlay"></div>
+</section><!--/#counter.front-page-section-->
+
+
+<section id="latest-news" class="front-page-section">
+    <div class="section-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h3>{% trans "Ecosystem" %}</h3>
+                </div><!--/.col-sm-12-->
+                <div class="col-sm-10 col-sm-offset-1">
+                    <div class="section-description">
+                        {% trans "Find out more information about each component." %}
+                    </div>
+                </div><!--/.col-sm-10.col-sm-offset-1-->
+            </div><!--/.row-->
+        </div><!--/.container-->
+    </div><!--/.section-header-->
+
+    <div class="section-content">
+        <div class="container">
+            <div class="row blog-carousel">
+
+                <div class="illdy-blog-post col-md-4 col-sm-6 col-xs-12">
+                    <div class="post" style="">
+                        <div class="post-image"
+                             style="background-image: url('{% static 'main/images/github/radioco_git.jpg' %}');"></div>
+                        <h5>
+                            <a href="https://colorlib.com/illdy/we-have-made-illdy-theme-seo-friendly/"
+                               title="We Have Made Illdy Theme SEO Friendly" class="post-title">
+                                Web app
+                            </a>
+                        </h5>
+                        <div class="post-entry">
+                            {% trans "The core of this project runs on a web application." %}
+                        </div><!--/.post-entry-->
+                        <a href="http://django-radio.readthedocs.io/en/latest/installation/install_web_app.html" title="Read more" class="post-button">
+                            <i class="fab fa-github"></i> {% trans "Read more" %}
+                        </a>
+                    </div><!--/.post-->
+                </div><!--/.col-sm-4-->
+
+                <div class="illdy-blog-post col-md-4 col-sm-6 col-xs-12">
+                    <div class="post" style="">
+                        <div class="post-image"
+                             style="background-image: url('{% static 'main/images/github/recorder_git.jpg' %}');"></div>
+                        <h5>
+                            <a href="https://colorlib.com/illdy/stunning-one-page-wordpress-theme-masses/"
+                               title="Stunning One Page WordPress Theme For Masses" class="post-title">
+                                {% trans "Recorder software" %}
+                            </a>
+                        </h5>
+                        <div class="post-entry">
+                            {% trans "The recorder app runs over Linux and communicates automatically with the web app" %}
+                        </div><!--/.post-entry-->
+                        <a href="http://django-radio.readthedocs.io/en/latest/installation/install_recorder_program.html" title="Read more" class="post-button">
+                            <i class="fab fa-github"></i> {% trans "Read more" %}
+                        </a>
+                    </div><!--/.post-->
+                </div><!--/.col-sm-4-->
+
+                <div class="illdy-blog-post col-md-4 col-sm-6 col-xs-12">
+                    <div class="post" style="">
+                        <div class="post-image"
+                             style="background-image: url('{% static 'main/images/github/radiocom_git.jpg' %}');"></div>
+                        <h5>
+                            <a href="https://colorlib.com/illdy/hello-world/" title="Hello world!" class="post-title">
+                                Radiocom-Android
+                            </a>
+                        </h5>
+                        <div class="post-entry">
+                            {% trans "Third party Android application." %}
+                        </div><!--/.post-entry-->
+                        <a href="https://github.com/ficiverson/radiocom-android" title="Read more" class="post-button">
+                            <i class="fab fa-github"></i> {% trans "Read more" %}
+                        </a>
+                    </div><!--/.post-->
+                </div><!--/.col-sm-4-->
+            </div><!--/.row-->
+        </div><!--/.container-->
+    </div><!--/.section-content-->
+</section>
+
+
+{% endblock %}

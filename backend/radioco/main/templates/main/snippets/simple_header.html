@@ -1,0 +1,25 @@
+{% load staticfiles %}
+
+<header id="header" class="header-front-page" style="background-image: url({% static 'main/images/cascos_radioco.jpg' %});background-attachment: fixed;background-position: bottom;">
+    {% include 'main/snippets/menu.html' %}
+
+    <div class="bottom-header blog">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2>
+                        {{ header }}
+                        <span class="span-dot">.</span>
+                    </h2>
+                </div><!--/.col-sm-12-->
+                <div class="col-sm-8 col-sm-offset-2">
+                    <p>{{ subheader }}</p>
+                    <!--<a href="http://django-radio.readthedocs.io" title="Documentation" class="header-button-one">Documentation</a>-->
+                    <!--<a href="https://github.com/iago1460/django-radio" title="Github"-->
+                       <!--class="header-button-two">Github</a>-->
+                </div><!--/.col-sm-8.col-sm-offset-2-->
+            </div><!--/.row-->
+        </div><!--/.container-->
+    </div><!--/.bottom-header.front-page-->
+
+</header><!--/#header-->

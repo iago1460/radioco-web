@@ -1,0 +1,30 @@
+*.pyc
+.DS_Store
+local_settings.py
+
+# /
+/.project
+/.pydevproject
+/.settings
+/.idea
+/.vscode
+.tern-project
+*.sqlite3
+/at_suite/img/tmp
+npm-debug.log
+*.orig
+*.kdbx.lock
+*.ipynb
+
+/backend/debugger/
+/backend/static/
+/backend/radioco/main/static/main/css/main.css
+/backend/radioco/main/templates/tmp_transalation/
+.env.local
+/_env
+
+# Files ending in ~
+*~
+
+# source locale
+backend/locale/en/*

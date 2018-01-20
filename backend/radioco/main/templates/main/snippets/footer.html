@@ -1,0 +1,69 @@
+{% load i18n staticfiles %}
+
+
+<footer id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3">
+                <div id="text-9" class="widget widget_text">
+                    <div class="widget-title"><h3>{% trans "INFORMATION" %}</h3></div>
+                    <div class="textwidget">
+                        <ul>
+                            <li><i class="fas fa-angle-right"></i> <a href="{% url 'installation' %}" title="Documentation">{% trans "Documentation" %}</a></li>
+                            <li><i class="fas fa-angle-right"></i> <a href="https://github.com/iago1460/django-radio/" title="GitHub">GitHub</a></li>
+                            <li>
+                                <i class="fas fa-angle-right"></i> <a href="http://django-radio.readthedocs.io/en/latest/contributing/index.html#contributing-translation"
+                                   title="{% trans "Get Involve" %}">{% trans "Get Involve" %}</a></li>
+                        </ul>
+
+                        <br>
+                        <a href="https://www.facebook.com/radioco.org/" target="_blank" title="Facebook"> <i
+                                class="fab fa-facebook-square fa-2x"></i></a>
+
+                        <a href="https://twitter.com/radioco_org" target="_blank" title="Twitter"> <i
+                                class="fab fa-twitter-square fa-2x"></i></a></div>
+                </div>
+            </div><!--/.col-sm-3-->
+            <div class="col-sm-3">
+                <div id="text-11" class="widget widget_text">
+                    <div class="widget-title"><h3>{% trans "DONATE" %}</h3></div>
+                    <div class="textwidget">{% trans "Donate to support our effort in developing free and open source software." %}
+                        <br><br>
+
+                        <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=KT43SLHW9H872">
+                            <img src="{% static 'main/images/donate.gif' %}"
+                                 alt="Donate Button with Credit Cards" data-recalc-dims="1">
+                        </a></div>
+                </div>
+            </div><!--/.col-sm-3-->
+            <div class="col-sm-3">
+                <div id="text-5" class="widget widget_text">
+                    <div class="widget-title"><h3>{% trans "LICENSE" %}</h3></div>
+                    <div class="textwidget"><p><a href="http://creativecommons.org/licenses/by/4.0/"><img
+                            alt="Creative Commons License"
+                            src="{% static 'main/images/creativecommons4.png' %}"
+                            data-recalc-dims="1"></a></p>
+                        <p>
+                            {% trans "This work by" %}
+                            <a href="https://www.linkedin.com/in/iagovelosoabalo/">Iago Veloso Abalo</a>
+                            {% trans "is licensed under a" %}
+                            <a href="http://creativecommons.org/licenses/by/4.0/">{% trans "Creative Commons Attribution 4.0 International License" %}</a>.
+                        </p>
+                    </div>
+                </div>
+            </div><!--/.col-sm-3-->
+            <div class="col-sm-3">
+                <a href="http://radioco.org/home" title="RadioCo" class="footer-logo"><img
+                        src="{% static 'main/images/radioco_80.png' %}" alt="RadioCo"
+                        title="RadioCo"/></a>
+                <p class="copyright">
+                    <span data-customizer="copyright-credit">
+                        {% trans "Template:" %}
+                        <a href="https://github.com/puikinsh/illdy" title="Illdy" target="_blank">Illdy</a>.
+                    </span>
+                </p>
+                <span>{% trans "Project" %}: RadioCo.</span>
+            </div><!--/.col-sm-3-->
+        </div><!--/.row-->
+    </div><!--/.container-->
+</footer><!--/#footer-->

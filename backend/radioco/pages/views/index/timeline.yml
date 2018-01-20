@@ -1,0 +1,132 @@
+images_path: main/images/event_timeline/
+resources_path: main/resources/
+translatable_fields:
+  - title
+  - location
+  - place
+items:
+  - title: Annual conference of Federal Association of Free Radios
+    image: 21_10_2016_stefan.png
+#    date: 2016/10/21
+    place: 21/10/2016 - Germany
+    location: Germany, Halle (Saale)
+    speakers: Stefan Walluhn / Jan Langhammer
+    resources:
+      - type: flag
+        language: es
+      - type: link
+        title: Podcast
+        icon: fas fa-volume-up
+        url: http://www.community-media.net/programmplanung-und-darstellung-mit-radioco/
+  - title: Escola de Verán de CUAC FM
+    image: 15_07_2016_iago_chema.png
+    place: 15/07/2016 - Spain
+    location: Spain, A Coruña
+    speakers: Iago Veloso / José María Casanova
+    resources:
+      - type: flag
+        language: es
+      - type: link
+        title: Web
+        icon: fas fa-globe
+        url: http://redescomunicacionsocial.es/
+      - type: splitter
+      - type: flag
+        language: gl
+      - type: link
+        title: Web
+        icon: fas fa-globe
+        url: https://cuacfm.org/escuela-verano-cuacfm-2016/
+      - type: splitter
+      - type: link
+        title: PDF
+        icon: far fa-file-pdf
+        url: /campamento_veran_cuac.pdf
+  - title: Segundo Encuentro Europeo de Medios Comunitarios
+    image: 12_03_2016_raspberry.png
+    place: 12/03/2016 - Spain
+    location: Spain, Madrid
+    speakers: José María Casanova / Álex Cortiñas
+    resources: []
+  - title: Xornada de Ondas Libres e Comunitarias
+    image: 23_01_2016_kalimera_isa_alex.png
+    place: 23/01/2016 - Spain
+    location: Spain, Santiago de Compostela
+    speakers: Álex Cortiñas / Isabel Lema Blanco
+    resources:
+      - type: flag
+        language: gl
+      - type: link
+        title: PDF
+        icon: far fa-file-pdf
+        url: https://cuacfm.org/wp-content/uploads/2016/02/Kalimera-2015-g.pdf
+  - title: Xornada de Boas Prácticas de Software Libre para ONGs
+    image: 22_10_2015_isa_chema.png
+    place: 22/10/2015 - Spain
+    location: Spain, Santiago de Compostela
+    speakers: Isabel Lema Blanco / José María Casanova Crespo
+    resources:
+      - type: flag
+        language: gl
+      - type: link
+        title: Video
+        icon: fab fa-youtube
+        url: https://www.youtube.com/watch?v=gADKGwaHqC0
+  - title: Radio Archives in European Community Media
+    image: 05_06_2015_captcha2.png
+    place: 05/06/2015 - Germany
+    location: Germany, Halle (Saale)
+    speakers: Jose Maria Casanova / Fernando Souto
+    resources:
+      - type: flag
+        language: en
+      - type: link
+        title: PDF
+        icon: far fa-file-pdf
+        url: https://cuacfm.org/wp-content/uploads/2015/06/CAPTCHA-2015-Livingarchives-From-manual-analogical-recording-to-RadioCo.pdf
+  - title: 14th edition of Technological Projects
+    image: 02_12_2014_iago.png
+    place: 02/12/2014 - Spain, Ourense
+    location: Spain, Ourense
+    speakers: Iago Veloso
+    resources:
+      - type: flag
+        language: es
+      - type: link
+        title: PDF
+        icon: far fa-file-pdf
+        url: /presentacion-expourense.pdf
+  - title: VII edition of Best Final Project with Free Software
+    image: 17_10_2014_iago.png
+    place: 17/10/2014 - Spain
+    location: Spain, Santiago de Compostela
+    speakers: Iago Veloso
+    resources:
+      - type: flag
+        language: gl
+      - type: link
+        title: PDF
+        icon: far fa-file-pdf
+        url: /mancomun_radioco.pdf
+  - title: Project exposition
+    image: 15_09_2014_fic.png
+    place: 15/09/2014 - Spain
+    location: Spain, A Coruña
+    speakers: Iago Veloso
+    resources:
+      - type: flag
+        language: es
+      - type: link
+        title: PDF 1
+        icon: far fa-file-pdf
+        url: /VelosoAbalo_Iago_TFG_2014.pdf
+      - type: link
+        title: PDF 2
+        icon: far fa-file-pdf
+        url: /presentacion_tfg.pdf
+  - title: Encuentro 14
+    image: 13_04_2014_encuentro14.png
+    place: 13/04/2014 - Spain
+    location: Spain, A Coruña
+    speakers: Iago Veloso
+    resources: []

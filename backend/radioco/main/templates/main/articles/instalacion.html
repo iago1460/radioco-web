@@ -1,0 +1,292 @@
+{% load staticfiles %}
+
+
+<h1 class="blog-post-title">Instalación y documentación adicional</h1>
+<div class="blog-post-entry markup-format">
+    <h3 style="text-align: left;"><strong>Manual de usuario</strong></h3>
+    <p>La documentación oficial se encuentra en inglés
+        <a href="http://django-radio.readthedocs.io/" target="_blank">en este enlace</a>.
+        Aunque contamos con una descripción mas detallada sobre el uso de Radioco tenga en cuenta que podría
+        estar desactualizada, no obstante debería ser aun valida:
+    </p>
+    <p>
+        <a href="{% static 'main/resources/manual_usuario_v2.pdf' %}" target="_blank">Manual de
+        usuario v2</a>
+    </p>
+    <h3 style="text-align: left;"><strong>Guía de instalación del programa grabador</strong></h3>
+    <p>
+        Esta guia describe el proceso de instalación en las distribuciones Debian y Ubuntu. </br>
+        Se requiere Python 2.7. Nos situamos en el directorio deseado y comenzamos la instalación:
+    </p>
+    <h3>Obtención del programa</h3>
+
+<p>Descargamos el programa de los repositorios y entramos en la carpeta:</p><!-- Crayon Syntax Highlighter v_2.7.2_beta -->
+
+		<div id="crayon-5aa3fb8bec0fd277376177" class="crayon-syntax crayon-theme-classic crayon-font-monaco crayon-os-mac print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+
+			<div class="crayon-toolbar" data-settings=" mouseover overlay hide delay" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><div class="crayon-button crayon-nums-button" title="Mostrar/ocultar números de línea"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-plain-button" title="Cambiar a texto plano"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-wrap-button" title="Toggle Line Wrap"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-expand-button" title="Expand Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-copy-button" title="Copy"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-popup-button" title="Abrir el código en una nueva ventana"><div class="crayon-button-icon"></div></div></div></div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+sudo apt-get install git-core
+git clone https://github.com/iago1460/django-radio-recorder.git
+cd django-radio-recorder</textarea></div>
+			<div class="crayon-main" style="">
+				<table class="crayon-table">
+					<tr class="crayon-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-5aa3fb8bec0fd277376177-1">1</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa3fb8bec0fd277376177-2">2</div><div class="crayon-num" data-line="crayon-5aa3fb8bec0fd277376177-3">3</div></div>
+				</td>
+						<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-5aa3fb8bec0fd277376177-1"><span class="crayon-e">sudo </span><span class="crayon-v">apt</span><span class="crayon-o">-</span><span class="crayon-e">get </span><span class="crayon-e">install </span><span class="crayon-v">git</span><span class="crayon-o">-</span><span class="crayon-e">core</span></div><div class="crayon-line crayon-striped-line" id="crayon-5aa3fb8bec0fd277376177-2"><span class="crayon-e">git </span><span class="crayon-r">clone</span><span class="crayon-h"> </span><span class="crayon-v">https</span><span class="crayon-o">:</span><span class="crayon-c">//github.com/iago1460/django-radio-recorder.git </span></div><div class="crayon-line" id="crayon-5aa3fb8bec0fd277376177-3"><span class="crayon-e">cd </span><span class="crayon-v">django</span><span class="crayon-o">-</span><span class="crayon-v">radio</span><span class="crayon-o">-</span><span class="crayon-v">recorder</span></div></div></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0007 seconds] -->
+<p></p>
+<h3>Creación del entorno virtual</h3>
+<p>La instalación de un entorno virtual es opcional, a continuación se proporcionan los comandos para instalar y crear el entorno virtual:</p><!-- Crayon Syntax Highlighter v_2.7.2_beta -->
+
+		<div id="crayon-5aa3fb8bec108382677789" class="crayon-syntax crayon-theme-classic crayon-font-monaco crayon-os-mac print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+
+			<div class="crayon-toolbar" data-settings=" mouseover overlay hide delay" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><div class="crayon-button crayon-nums-button" title="Mostrar/ocultar números de línea"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-plain-button" title="Cambiar a texto plano"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-wrap-button" title="Toggle Line Wrap"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-expand-button" title="Expand Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-copy-button" title="Copy"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-popup-button" title="Abrir el código en una nueva ventana"><div class="crayon-button-icon"></div></div></div></div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+sudo apt-get install python-virtualenv
+virtualenv .
+source bin/activate</textarea></div>
+			<div class="crayon-main" style="">
+				<table class="crayon-table">
+					<tr class="crayon-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-5aa3fb8bec108382677789-1">1</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa3fb8bec108382677789-2">2</div><div class="crayon-num" data-line="crayon-5aa3fb8bec108382677789-3">3</div></div>
+				</td>
+						<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-5aa3fb8bec108382677789-1"><span class="crayon-e">sudo </span><span class="crayon-v">apt</span><span class="crayon-o">-</span><span class="crayon-e">get </span><span class="crayon-e">install </span><span class="crayon-v">python</span><span class="crayon-o">-</span><span class="crayon-e">virtualenv</span></div><div class="crayon-line crayon-striped-line" id="crayon-5aa3fb8bec108382677789-2"><span class="crayon-i">virtualenv</span><span class="crayon-h"> </span><span class="crayon-sy">.</span></div><div class="crayon-line" id="crayon-5aa3fb8bec108382677789-3"><span class="crayon-e">source </span><span class="crayon-v">bin</span><span class="crayon-o">/</span><span class="crayon-v">activate</span></div></div></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0004 seconds] -->
+<p></p>
+<h3>Instalación de requisitos</h3>
+<p>Instalamos los requisitos:</p><!-- Crayon Syntax Highlighter v_2.7.2_beta -->
+
+		<div id="crayon-5aa3fb8bec10e401190005" class="crayon-syntax crayon-theme-classic crayon-font-monaco crayon-os-mac print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+
+			<div class="crayon-toolbar" data-settings=" mouseover overlay hide delay" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><div class="crayon-button crayon-nums-button" title="Mostrar/ocultar números de línea"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-plain-button" title="Cambiar a texto plano"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-wrap-button" title="Toggle Line Wrap"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-expand-button" title="Expand Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-copy-button" title="Copy"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-popup-button" title="Abrir el código en una nueva ventana"><div class="crayon-button-icon"></div></div></div></div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+sudo apt-get install python-dev python-pip
+pip install -r requirements.txt
+sudo apt-get install alsa-utils
+sudo apt-get install vorbis-tools</textarea></div>
+			<div class="crayon-main" style="">
+				<table class="crayon-table">
+					<tr class="crayon-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-5aa3fb8bec10e401190005-1">1</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa3fb8bec10e401190005-2">2</div><div class="crayon-num" data-line="crayon-5aa3fb8bec10e401190005-3">3</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa3fb8bec10e401190005-4">4</div></div>
+				</td>
+						<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-5aa3fb8bec10e401190005-1"><span class="crayon-e">sudo </span><span class="crayon-v">apt</span><span class="crayon-o">-</span><span class="crayon-e">get </span><span class="crayon-e">install </span><span class="crayon-v">python</span><span class="crayon-o">-</span><span class="crayon-e">dev </span><span class="crayon-v">python</span><span class="crayon-o">-</span><span class="crayon-e">pip</span></div><div class="crayon-line crayon-striped-line" id="crayon-5aa3fb8bec10e401190005-2"><span class="crayon-e">pip </span><span class="crayon-v">install</span><span class="crayon-h"> </span><span class="crayon-o">-</span><span class="crayon-i">r</span><span class="crayon-h"> </span><span class="crayon-v">requirements</span><span class="crayon-sy">.</span><span class="crayon-e">txt</span></div><div class="crayon-line" id="crayon-5aa3fb8bec10e401190005-3"><span class="crayon-e">sudo </span><span class="crayon-v">apt</span><span class="crayon-o">-</span><span class="crayon-e">get </span><span class="crayon-e">install </span><span class="crayon-v">alsa</span><span class="crayon-o">-</span><span class="crayon-e">utils</span></div><div class="crayon-line crayon-striped-line" id="crayon-5aa3fb8bec10e401190005-4"><span class="crayon-e">sudo </span><span class="crayon-v">apt</span><span class="crayon-o">-</span><span class="crayon-e">get </span><span class="crayon-e">install </span><span class="crayon-v">vorbis</span><span class="crayon-o">-</span><span class="crayon-v">tools</span></div></div></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0008 seconds] -->
+<p></p>
+<h3>Configuración del programa</h3>
+<p>Toda la configuración se realiza a través del archivo de configuración llamado “settings.ini”:</p>
+<h4>Configuración típica</h4>
+<p>Para realizar la conexión del programa con la aplicación web debe proporcionarle los siguientes datos:</p>
+<ul>
+<li><strong>url</strong>: La dirección URL pública de la aplicación web y junto con la ruta del api, por ejemplo: “http://demo.radioco.org:80/api/1/”. Es necesario mantener el mismo formato que el ejemplo.</li>
+<li><strong>token</strong>: El token de autentificación proporcionado por la aplicación web en la página de administración.</li>
+</ul>
+<p>Con los pasos anteriores el programa ya es capaz de obtener la información a grabar y comunicarle cuando ha grabado el archivo.</p>
+<p>Veamos ahora como configurar la subida del archivo mediante FTP:</p>
+<ul>
+<li><strong>enable</strong>: Esta opción debemos establecerla a cierta escribiendo “True”</li>
+<li><strong>server</strong>: La dirección del servidor FTP, respete el formato “servidorFTP.com”</li>
+<li><strong>username</strong>: El nombre de usuario del servidor FTP</li>
+<li><strong>password</strong>: La contraseña del servidor FTP</li>
+</ul>
+<p>Si no se quieren conservar los archivos grabados una vez subidos al servidor se debe activar la opción “delete_files_after_upload”.</p>
+<p>A continuación se muestra el archivo de configuración por defecto con el resto de opciones:</p><!-- Crayon Syntax Highlighter v_2.7.2_beta -->
+
+		<div id="crayon-5aa3fb8bec115903911764" class="crayon-syntax crayon-theme-classic crayon-font-monaco crayon-os-mac print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+
+			<div class="crayon-toolbar" data-settings=" mouseover overlay hide delay" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><div class="crayon-button crayon-nums-button" title="Mostrar/ocultar números de línea"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-plain-button" title="Cambiar a texto plano"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-wrap-button" title="Toggle Line Wrap"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-expand-button" title="Expand Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-copy-button" title="Copy"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-popup-button" title="Abrir el código en una nueva ventana"><div class="crayon-button-icon"></div></div></div></div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+nano recorder/settings.ini</textarea></div>
+			<div class="crayon-main" style="">
+				<table class="crayon-table">
+					<tr class="crayon-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-5aa3fb8bec115903911764-1">1</div></div>
+				</td>
+						<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-5aa3fb8bec115903911764-1"><span class="crayon-e">nano </span><span class="crayon-v">recorder</span><span class="crayon-o">/</span><span class="crayon-v">settings</span><span class="crayon-sy">.</span><span class="crayon-v">ini</span></div></div></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0002 seconds] -->
+<p></p><!-- Crayon Syntax Highlighter v_2.7.2_beta -->
+
+		<div id="crayon-5aa3fb8bec11a961279262" class="crayon-syntax crayon-theme-classic crayon-font-monaco crayon-os-mac print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+
+			<div class="crayon-toolbar" data-settings=" mouseover overlay hide delay" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><div class="crayon-button crayon-nums-button" title="Mostrar/ocultar números de línea"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-plain-button" title="Cambiar a texto plano"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-wrap-button" title="Toggle Line Wrap"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-expand-button" title="Expand Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-copy-button" title="Copy"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-popup-button" title="Abrir el código en una nueva ventana"><div class="crayon-button-icon"></div></div></div></div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+#
+# Units of measurement for time: seconds
+# Boolean values: 'True', 'False'
+#
+[SETTINGS]
+offline_mode:False
+url:http://localhost:8000/api/1/
+token:8fdde6d703c05773084ea83e5ec2da62637666a0
+
+# Name of files
+schedule_file:schedules.txt
+log_file:status.log
+
+# Folders
+recording_folder:recorders/incomplete/
+complete_folder:recorders/complete/
+uploaded_folder:recorders/uploaded/
+
+# Recording
+metadata_language:en
+file_extension:ogg
+recorder_command:arecord --buffer-size=192000 -f S16_LE -c 2 -r 48000 -t raw
+recorder_command_2:oggenc - -r -B 16 -C 2 -R 48000 -q 3 --title [TITLE] --artist [AUTHOR] --album [ALBUM] --tracknum [TRACK] --genre [GENRE] -c comment=[COMMENT] -o [OUTPUT]
+
+# Time is represented in seconds
+update_time:3600
+retry_time:120
+upload_time:60
+socket_timeout:300
+
+# Upload configuration
+delete_files_after_upload:False
+
+[FTP]
+enable:False
+server:server.radioco.org
+username:username
+password:password</textarea></div>
+			<div class="crayon-main" style="">
+				<table class="crayon-table">
+					<tr class="crayon-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-5aa3fb8bec11a961279262-1">1</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa3fb8bec11a961279262-2">2</div><div class="crayon-num" data-line="crayon-5aa3fb8bec11a961279262-3">3</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa3fb8bec11a961279262-4">4</div><div class="crayon-num" data-line="crayon-5aa3fb8bec11a961279262-5">5</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa3fb8bec11a961279262-6">6</div><div class="crayon-num" data-line="crayon-5aa3fb8bec11a961279262-7">7</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa3fb8bec11a961279262-8">8</div><div class="crayon-num" data-line="crayon-5aa3fb8bec11a961279262-9">9</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa3fb8bec11a961279262-10">10</div><div class="crayon-num" data-line="crayon-5aa3fb8bec11a961279262-11">11</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa3fb8bec11a961279262-12">12</div><div class="crayon-num" data-line="crayon-5aa3fb8bec11a961279262-13">13</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa3fb8bec11a961279262-14">14</div><div class="crayon-num" data-line="crayon-5aa3fb8bec11a961279262-15">15</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa3fb8bec11a961279262-16">16</div><div class="crayon-num" data-line="crayon-5aa3fb8bec11a961279262-17">17</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa3fb8bec11a961279262-18">18</div><div class="crayon-num" data-line="crayon-5aa3fb8bec11a961279262-19">19</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa3fb8bec11a961279262-20">20</div><div class="crayon-num" data-line="crayon-5aa3fb8bec11a961279262-21">21</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa3fb8bec11a961279262-22">22</div><div class="crayon-num" data-line="crayon-5aa3fb8bec11a961279262-23">23</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa3fb8bec11a961279262-24">24</div><div class="crayon-num" data-line="crayon-5aa3fb8bec11a961279262-25">25</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa3fb8bec11a961279262-26">26</div><div class="crayon-num" data-line="crayon-5aa3fb8bec11a961279262-27">27</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa3fb8bec11a961279262-28">28</div><div class="crayon-num" data-line="crayon-5aa3fb8bec11a961279262-29">29</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa3fb8bec11a961279262-30">30</div><div class="crayon-num" data-line="crayon-5aa3fb8bec11a961279262-31">31</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa3fb8bec11a961279262-32">32</div><div class="crayon-num" data-line="crayon-5aa3fb8bec11a961279262-33">33</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa3fb8bec11a961279262-34">34</div><div class="crayon-num" data-line="crayon-5aa3fb8bec11a961279262-35">35</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa3fb8bec11a961279262-36">36</div><div class="crayon-num" data-line="crayon-5aa3fb8bec11a961279262-37">37</div><div class="crayon-num crayon-striped-num" data-line="crayon-5aa3fb8bec11a961279262-38">38</div></div>
+				</td>
+						<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-5aa3fb8bec11a961279262-1"><span class="crayon-p">#</span></div><div class="crayon-line crayon-striped-line" id="crayon-5aa3fb8bec11a961279262-2"><span class="crayon-p"># Units of measurement for time: seconds</span></div><div class="crayon-line" id="crayon-5aa3fb8bec11a961279262-3"><span class="crayon-p"># Boolean values: 'True', 'False'</span></div><div class="crayon-line crayon-striped-line" id="crayon-5aa3fb8bec11a961279262-4"><span class="crayon-p">#</span></div><div class="crayon-line" id="crayon-5aa3fb8bec11a961279262-5"><span class="crayon-sy">[</span><span class="crayon-v">SETTINGS</span><span class="crayon-sy">]</span></div><div class="crayon-line crayon-striped-line" id="crayon-5aa3fb8bec11a961279262-6"><span class="crayon-v">offline_mode</span><span class="crayon-o">:</span><span class="crayon-t">False</span></div><div class="crayon-line" id="crayon-5aa3fb8bec11a961279262-7"><span class="crayon-v">url</span><span class="crayon-o">:</span><span class="crayon-v">http</span><span class="crayon-o">:</span><span class="crayon-c">//localhost:8000/api/1/</span></div><div class="crayon-line crayon-striped-line" id="crayon-5aa3fb8bec11a961279262-8"><span class="crayon-v">token</span><span class="crayon-o">:</span><span class="crayon-cn">8fdde6d703c05773084ea83e5ec2da62637666a0</span></div><div class="crayon-line" id="crayon-5aa3fb8bec11a961279262-9">&nbsp;</div><div class="crayon-line crayon-striped-line" id="crayon-5aa3fb8bec11a961279262-10"><span class="crayon-p"># Name of files</span></div><div class="crayon-line" id="crayon-5aa3fb8bec11a961279262-11"><span class="crayon-v">schedule_file</span><span class="crayon-o">:</span><span class="crayon-v">schedules</span><span class="crayon-sy">.</span><span class="crayon-e">txt</span></div><div class="crayon-line crayon-striped-line" id="crayon-5aa3fb8bec11a961279262-12"><span class="crayon-v">log_file</span><span class="crayon-o">:</span><span class="crayon-v">status</span><span class="crayon-sy">.</span><span class="crayon-v">log</span></div><div class="crayon-line" id="crayon-5aa3fb8bec11a961279262-13">&nbsp;</div><div class="crayon-line crayon-striped-line" id="crayon-5aa3fb8bec11a961279262-14"><span class="crayon-p"># Folders</span></div><div class="crayon-line" id="crayon-5aa3fb8bec11a961279262-15"><span class="crayon-v">recording_folder</span><span class="crayon-o">:</span><span class="crayon-v">recorders</span><span class="crayon-o">/</span><span class="crayon-v">incomplete</span><span class="crayon-o">/</span></div><div class="crayon-line crayon-striped-line" id="crayon-5aa3fb8bec11a961279262-16"><span class="crayon-v">complete_folder</span><span class="crayon-o">:</span><span class="crayon-v">recorders</span><span class="crayon-o">/</span><span class="crayon-v">complete</span><span class="crayon-o">/</span></div><div class="crayon-line" id="crayon-5aa3fb8bec11a961279262-17"><span class="crayon-v">uploaded_folder</span><span class="crayon-o">:</span><span class="crayon-v">recorders</span><span class="crayon-o">/</span><span class="crayon-v">uploaded</span><span class="crayon-o">/</span></div><div class="crayon-line crayon-striped-line" id="crayon-5aa3fb8bec11a961279262-18">&nbsp;</div><div class="crayon-line" id="crayon-5aa3fb8bec11a961279262-19"><span class="crayon-p"># Recording</span></div><div class="crayon-line crayon-striped-line" id="crayon-5aa3fb8bec11a961279262-20"><span class="crayon-v">metadata_language</span><span class="crayon-o">:</span><span class="crayon-e">en</span></div><div class="crayon-line" id="crayon-5aa3fb8bec11a961279262-21"><span class="crayon-v">file_extension</span><span class="crayon-o">:</span><span class="crayon-e">ogg</span></div><div class="crayon-line crayon-striped-line" id="crayon-5aa3fb8bec11a961279262-22"><span class="crayon-v">recorder_command</span><span class="crayon-o">:</span><span class="crayon-v">arecord</span><span class="crayon-h"> </span><span class="crayon-o">--</span><span class="crayon-v">buffer</span><span class="crayon-o">-</span><span class="crayon-v">size</span><span class="crayon-o">=</span><span class="crayon-cn">192000</span><span class="crayon-h"> </span><span class="crayon-o">-</span><span class="crayon-i">f</span><span class="crayon-h"> </span><span class="crayon-v">S16_LE</span><span class="crayon-h"> </span><span class="crayon-o">-</span><span class="crayon-i">c</span><span class="crayon-h"> </span><span class="crayon-cn">2</span><span class="crayon-h"> </span><span class="crayon-o">-</span><span class="crayon-i">r</span><span class="crayon-h"> </span><span class="crayon-cn">48000</span><span class="crayon-h"> </span><span class="crayon-o">-</span><span class="crayon-i">t</span><span class="crayon-h"> </span><span class="crayon-e">raw</span></div><div class="crayon-line" id="crayon-5aa3fb8bec11a961279262-23"><span class="crayon-v">recorder_command_2</span><span class="crayon-o">:</span><span class="crayon-v">oggenc</span><span class="crayon-h"> </span><span class="crayon-o">-</span><span class="crayon-h"> </span><span class="crayon-o">-</span><span class="crayon-v">r</span><span class="crayon-h"> </span><span class="crayon-o">-</span><span class="crayon-i">B</span><span class="crayon-h"> </span><span class="crayon-cn">16</span><span class="crayon-h"> </span><span class="crayon-o">-</span><span class="crayon-i">C</span><span class="crayon-h"> </span><span class="crayon-cn">2</span><span class="crayon-h"> </span><span class="crayon-o">-</span><span class="crayon-i">R</span><span class="crayon-h"> </span><span class="crayon-cn">48000</span><span class="crayon-h"> </span><span class="crayon-o">-</span><span class="crayon-i">q</span><span class="crayon-h"> </span><span class="crayon-cn">3</span><span class="crayon-h"> </span><span class="crayon-o">--</span><span class="crayon-i">title</span><span class="crayon-h"> </span><span class="crayon-sy">[</span><span class="crayon-v">TITLE</span><span class="crayon-sy">]</span><span class="crayon-h"> </span><span class="crayon-o">--</span><span class="crayon-i">artist</span><span class="crayon-h"> </span><span class="crayon-sy">[</span><span class="crayon-v">AUTHOR</span><span class="crayon-sy">]</span><span class="crayon-h"> </span><span class="crayon-o">--</span><span class="crayon-i">album</span><span class="crayon-h"> </span><span class="crayon-sy">[</span><span class="crayon-v">ALBUM</span><span class="crayon-sy">]</span><span class="crayon-h"> </span><span class="crayon-o">--</span><span class="crayon-i">tracknum</span><span class="crayon-h"> </span><span class="crayon-sy">[</span><span class="crayon-v">TRACK</span><span class="crayon-sy">]</span><span class="crayon-h"> </span><span class="crayon-o">--</span><span class="crayon-i">genre</span><span class="crayon-h"> </span><span class="crayon-sy">[</span><span class="crayon-v">GENRE</span><span class="crayon-sy">]</span><span class="crayon-h"> </span><span class="crayon-o">-</span><span class="crayon-i">c</span><span class="crayon-h"> </span><span class="crayon-v">comment</span><span class="crayon-o">=</span><span class="crayon-sy">[</span><span class="crayon-v">COMMENT</span><span class="crayon-sy">]</span><span class="crayon-h"> </span><span class="crayon-o">-</span><span class="crayon-i">o</span><span class="crayon-h"> </span><span class="crayon-sy">[</span><span class="crayon-v">OUTPUT</span><span class="crayon-sy">]</span></div><div class="crayon-line crayon-striped-line" id="crayon-5aa3fb8bec11a961279262-24">&nbsp;</div><div class="crayon-line" id="crayon-5aa3fb8bec11a961279262-25"><span class="crayon-p"># Time is represented in seconds</span></div><div class="crayon-line crayon-striped-line" id="crayon-5aa3fb8bec11a961279262-26"><span class="crayon-v">update_time</span><span class="crayon-o">:</span><span class="crayon-cn">3600</span></div><div class="crayon-line" id="crayon-5aa3fb8bec11a961279262-27"><span class="crayon-v">retry_time</span><span class="crayon-o">:</span><span class="crayon-cn">120</span></div><div class="crayon-line crayon-striped-line" id="crayon-5aa3fb8bec11a961279262-28"><span class="crayon-v">upload_time</span><span class="crayon-o">:</span><span class="crayon-cn">60</span></div><div class="crayon-line" id="crayon-5aa3fb8bec11a961279262-29"><span class="crayon-v">socket_timeout</span><span class="crayon-o">:</span><span class="crayon-cn">300</span></div><div class="crayon-line crayon-striped-line" id="crayon-5aa3fb8bec11a961279262-30">&nbsp;</div><div class="crayon-line" id="crayon-5aa3fb8bec11a961279262-31"><span class="crayon-p"># Upload configuration</span></div><div class="crayon-line crayon-striped-line" id="crayon-5aa3fb8bec11a961279262-32"><span class="crayon-v">delete_files_after_upload</span><span class="crayon-o">:</span><span class="crayon-t">False</span></div><div class="crayon-line" id="crayon-5aa3fb8bec11a961279262-33">&nbsp;</div><div class="crayon-line crayon-striped-line" id="crayon-5aa3fb8bec11a961279262-34"><span class="crayon-sy">[</span><span class="crayon-v">FTP</span><span class="crayon-sy">]</span></div><div class="crayon-line" id="crayon-5aa3fb8bec11a961279262-35"><span class="crayon-v">enable</span><span class="crayon-o">:</span><span class="crayon-t">False</span></div><div class="crayon-line crayon-striped-line" id="crayon-5aa3fb8bec11a961279262-36"><span class="crayon-v">server</span><span class="crayon-o">:</span><span class="crayon-v">server</span><span class="crayon-sy">.</span><span class="crayon-v">radioco</span><span class="crayon-sy">.</span><span class="crayon-e">org</span></div><div class="crayon-line" id="crayon-5aa3fb8bec11a961279262-37"><span class="crayon-v">username</span><span class="crayon-o">:</span><span class="crayon-e">username</span></div><div class="crayon-line crayon-striped-line" id="crayon-5aa3fb8bec11a961279262-38"><span class="crayon-v">password</span><span class="crayon-o">:</span><span class="crayon-v">password</span></div></div></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0042 seconds] -->
+<p></p>
+<h4>Configuración avanzada del programa</h4>
+<h5>Configuración de la grabación de audio</h5>
+<p>Por defecto el programa graba a 16 bits a una frecuencia de 48kHz en estéreo. Para cambiar esto es necesario consultar el manual del comando “arecord”</p><!-- Crayon Syntax Highlighter v_2.7.2_beta -->
+
+		<div id="crayon-5aa3fb8bec121771796074" class="crayon-syntax crayon-theme-classic crayon-font-monaco crayon-os-mac print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+
+			<div class="crayon-toolbar" data-settings=" mouseover overlay hide delay" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><div class="crayon-button crayon-nums-button" title="Mostrar/ocultar números de línea"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-plain-button" title="Cambiar a texto plano"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-wrap-button" title="Toggle Line Wrap"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-expand-button" title="Expand Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-copy-button" title="Copy"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-popup-button" title="Abrir el código en una nueva ventana"><div class="crayon-button-icon"></div></div></div></div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+man arecord</textarea></div>
+			<div class="crayon-main" style="">
+				<table class="crayon-table">
+					<tr class="crayon-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-5aa3fb8bec121771796074-1">1</div></div>
+				</td>
+						<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-5aa3fb8bec121771796074-1"><span class="crayon-e">man </span><span class="crayon-v">arecord</span></div></div></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0002 seconds] -->
+<p>Si se modifican los parámetros de grabación del comando “arecord” es necesario cambiar la configuración de “oggenc” que comprime el fichero a OGG.</p><!-- Crayon Syntax Highlighter v_2.7.2_beta -->
+
+		<div id="crayon-5aa3fb8bec127113226348" class="crayon-syntax crayon-theme-classic crayon-font-monaco crayon-os-mac print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+
+			<div class="crayon-toolbar" data-settings=" mouseover overlay hide delay" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><div class="crayon-button crayon-nums-button" title="Mostrar/ocultar números de línea"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-plain-button" title="Cambiar a texto plano"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-wrap-button" title="Toggle Line Wrap"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-expand-button" title="Expand Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-copy-button" title="Copy"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-popup-button" title="Abrir el código en una nueva ventana"><div class="crayon-button-icon"></div></div></div></div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+man oggenc</textarea></div>
+			<div class="crayon-main" style="">
+				<table class="crayon-table">
+					<tr class="crayon-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-5aa3fb8bec127113226348-1">1</div></div>
+				</td>
+						<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-5aa3fb8bec127113226348-1"><span class="crayon-e">man </span><span class="crayon-v">oggenc</span></div></div></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0002 seconds] -->
+<p>Si quiere grabar en otro formato diferente de OGG como por ejemplo MP3 puede consultar la librería <a href="http://lame.sourceforge.net/" target="_blank">lame</a>.</p>
+<h5>Configuración offline</h5>
+<p>El programa grabador puede funcionar sin conexión a internet, aunque esta configuración es algo atípica permite realizar la grabación de audio si se le proporcionan los horarios, esta información se puede obtener de la siguiente dirección:</p>
+<p>http://demo.radioco.org:80/api/1/recording_schedules/?start=2014-09-01+00:00:00&#038;next_hours=320</p>
+<p>Debes sustituir “demo.radioco.org:80” por la dirección del servidor.<br />
+La fecha a partir de la que quieres la información start=2014-09-01+00:00:00, siendo en este ejemplo el uno de septiembre de 2014 a las 00:00:00.<br />
+Opcionalmente el parámetro “next_hours=320” sobrescribe la configuración del servidor para obtener los horarios a grabar en las próximas 320 horas.</p>
+<p>Una vez introducida correctamente la dirección URL deberá autentificarse con las credenciales del programa grabador. La información obtenida debe ser guardada en el archivo definido en la configuración, por defecto “schedules.txt”, dentro de la carpeta del programa.</p>
+<h3>Ejecución del programa</h3>
+<p>Para ejecutar el programa:</p><!-- Crayon Syntax Highlighter v_2.7.2_beta -->
+
+		<div id="crayon-5aa3fb8bec12d474923634" class="crayon-syntax crayon-theme-classic crayon-font-monaco crayon-os-mac print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+
+			<div class="crayon-toolbar" data-settings=" mouseover overlay hide delay" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><div class="crayon-button crayon-nums-button" title="Mostrar/ocultar números de línea"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-plain-button" title="Cambiar a texto plano"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-wrap-button" title="Toggle Line Wrap"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-expand-button" title="Expand Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-copy-button" title="Copy"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-popup-button" title="Abrir el código en una nueva ventana"><div class="crayon-button-icon"></div></div></div></div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+python main.py</textarea></div>
+			<div class="crayon-main" style="">
+				<table class="crayon-table">
+					<tr class="crayon-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-5aa3fb8bec12d474923634-1">1</div></div>
+				</td>
+						<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-5aa3fb8bec12d474923634-1"><span class="crayon-e">python </span><span class="crayon-v">main</span><span class="crayon-sy">.</span><span class="crayon-v">py</span></div></div></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0002 seconds] -->
+<p>Si lo queremos dejar en Segundo plano:</p><!-- Crayon Syntax Highlighter v_2.7.2_beta -->
+
+		<div id="crayon-5aa3fb8bec132584865672" class="crayon-syntax crayon-theme-classic crayon-font-monaco crayon-os-mac print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+
+			<div class="crayon-toolbar" data-settings=" mouseover overlay hide delay" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><div class="crayon-button crayon-nums-button" title="Mostrar/ocultar números de línea"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-plain-button" title="Cambiar a texto plano"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-wrap-button" title="Toggle Line Wrap"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-expand-button" title="Expand Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-copy-button" title="Copy"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-popup-button" title="Abrir el código en una nueva ventana"><div class="crayon-button-icon"></div></div></div></div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+nohup python main.py &amp;amp;</textarea></div>
+			<div class="crayon-main" style="">
+				<table class="crayon-table">
+					<tr class="crayon-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-5aa3fb8bec132584865672-1">1</div></div>
+				</td>
+						<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-5aa3fb8bec132584865672-1"><span class="crayon-e">nohup </span><span class="crayon-e">python </span><span class="crayon-v">main</span><span class="crayon-sy">.</span><span class="crayon-v">py</span><span class="crayon-h"> </span><span class="crayon-o">&amp;</span><span class="crayon-v">amp</span><span class="crayon-sy">;</span></div></div></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0003 seconds] -->
+<p>El programa intentará seguir en ejecución a pesar de que ocurran errores. En la carpeta se puede encontrar un archivo de log, por defecto llamado “status.log”, donde se registran los errores y avisos de la aplicación.</p>
+<p>Para finalizar la ejecución del programa basta con pulsar “Control + C” o enviarle una señal de cierre al proceso.</p>
+</div><!--/.blog-post-entry.markup-format-->

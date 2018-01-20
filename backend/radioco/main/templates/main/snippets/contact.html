@@ -1,0 +1,68 @@
+{% load i18n staticfiles %}
+
+<section id="contact-us" class="front-page-section">
+    <div class="section-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h3>{% trans "Contact us" %}</h3>
+                </div><!--/.col-sm-12-->
+                <div class="col-sm-10 col-sm-offset-1">
+                    <p>{% trans "And we will get in touch as soon as possible." %}</p>
+                </div><!--/.col-sm-10.col-sm-offset-1-->
+            </div><!--/.row-->
+        </div><!--/.container-->
+    </div><!--/.section-header-->
+    <div class="section-content">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div role="form" class="wpcf7" id="wpcf7-f308-o1" lang="es-ES" dir="ltr">
+                        <div class="screen-reader-response"></div>
+                        <form action="/inicio/#wpcf7-f308-o1" method="post" class="wpcf7-form" novalidate="novalidate">
+                            <div style="display: none;">
+                                <input type="hidden" name="_wpcf7" value="308"/>
+                                <input type="hidden" name="_wpcf7_version" value="4.8.1"/>
+                                <input type="hidden" name="_wpcf7_locale" value="es_ES"/>
+                                <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f308-o1"/>
+                                <input type="hidden" name="_wpcf7_container_post" value="0"/>
+                                <input type="hidden" name="_wpcf7_nonce" value="4b1880515c"/>
+                            </div>
+                            <p><label> Your Name (required)<br/>
+                                <span class="wpcf7-form-control-wrap your-name"><input type="text" name="your-name"
+                                                                                       value="" size="40"
+                                                                                       class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
+                                                                                       aria-required="true"
+                                                                                       aria-invalid="false"/></span>
+                            </label></p>
+                            <p><label> Your Email (required)<br/>
+                                <span class="wpcf7-form-control-wrap your-email"><input type="email" name="your-email"
+                                                                                        value="" size="40"
+                                                                                        class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email"
+                                                                                        aria-required="true"
+                                                                                        aria-invalid="false"/></span>
+                            </label></p>
+                            <p><label> Subject<br/>
+                                <span class="wpcf7-form-control-wrap your-subject"><input type="text"
+                                                                                          name="your-subject" value=""
+                                                                                          size="40"
+                                                                                          class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
+                                                                                          aria-required="true"
+                                                                                          aria-invalid="false"/></span>
+                            </label></p>
+                            <p><label> Your Message<br/>
+                                <span class="wpcf7-form-control-wrap your-message"><textarea name="your-message"
+                                                                                             cols="40" rows="10"
+                                                                                             class="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required"
+                                                                                             aria-required="true"
+                                                                                             aria-invalid="false"></textarea></span>
+                            </label></p>
+                            <p><input type="submit" value="Send" class="wpcf7-form-control wpcf7-submit"/></p>
+                            <div class="wpcf7-response-output wpcf7-display-none"></div>
+                        </form>
+                    </div>
+                </div><!--/.col-sm-12-->
+            </div><!--/.row-->
+        </div><!--/.container-->
+    </div><!--/.section-content-->
+</section><!--/#contact-us.front-page-section-->

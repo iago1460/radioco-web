@@ -1,0 +1,14 @@
+version: '3.0'
+services:
+
+# Application Containers ------------------------------------------------------
+
+  django:
+    environment:
+      - ENVIRONMENT_TYPE=dev
+    stdin_open: true
+    tty: true
+    command: python3 manage.py runserver --noreload 0.0.0.0:8000
+
+  sass:
+    command: node-sass scss/ -wo css/

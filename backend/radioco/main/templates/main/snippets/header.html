@@ -1,0 +1,25 @@
+{% load i18n staticfiles %}
+
+<header id="header" class="header-front-page"
+        style="background-image: url({% static 'main/images/cascos_radioco.jpg' %});background-attachment: fixed;">
+    {% include 'main/snippets/menu.html' %}
+
+    <div class="bottom-header front-page">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span data-customizer="first-row-from-title">{% trans "Fast" %}</span><span
+                            class="span-dot first-span-dot">.</span> <span data-customizer="second-row-from-title">{% trans "Reliable" %}</span><span
+                            class="span-dot second-span-dot">.</span>
+                        <span data-customizer="third-row-from-title">{% trans "Free software" %}</span></h2>
+                </div><!--/.col-sm-12-->
+                <div class="col-sm-8 col-sm-offset-2">
+                    <p>{% trans "RadioCo is a radio management application suitable for community radios that makes easy scheduling, live recording and publishing." %}</p>
+                    <a href="http://django-radio.readthedocs.io" title="Documentation" class="header-button-one">{% trans "Documentation" %}</a>
+                    <a href="{% url 'installation' %}" title="{% trans "Setup" %}" class="header-button-two">{% trans "Setup" %}</a>
+                </div><!--/.col-sm-8.col-sm-offset-2-->
+            </div><!--/.row-->
+        </div><!--/.container-->
+    </div><!--/.bottom-header.front-page-->
+
+</header><!--/#header-->

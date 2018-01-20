@@ -1,0 +1,2 @@
+template: main/installation.html
+timeline: !include steps.yml

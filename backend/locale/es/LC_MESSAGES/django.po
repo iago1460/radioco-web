@@ -1,0 +1,540 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-03-12 14:45+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: radioco/main/templates/main/about.html:7
+#: radioco/main/templates/main/snippets/menu.html:19
+#: radioco/main/templates/main/snippets/menu.html:58
+msgid "About"
+msgstr "Sobre Nosotros"
+
+#: radioco/main/templates/main/about.html:15
+msgid "History"
+msgstr "Historia"
+
+#: radioco/main/templates/main/about.html:25
+msgid ""
+"RadioCo started in 2014 as a Iago Veloso's dissertation project, originally "
+"named \"Live broadcast automatic recording for a Community radio station "
+"with Free Software\" was created to provide a automated recording system to "
+"Cuac FM. Since then successfully produces high quality podcasts every day."
+msgstr ""
+
+#: radioco/main/templates/main/about.html:33
+msgid ""
+"This is an Open Source project, which means everybody can contribute on it. "
+"Everything you see here, from the documentation to the code itself, was "
+"created by and for the community."
+msgstr ""
+
+#: radioco/main/templates/main/index.html:17
+msgid ""
+"RadioCo is a user-friendly system with an intuitive drag-and-drop interface."
+msgstr ""
+"RadioCo es un sistema de fácil uso que cuenta con una interfaz intuitiva "
+"mediante arrastrar y soltar"
+
+#: radioco/main/templates/main/index.html:18
+msgid "Here are the main features:"
+msgstr "Aquí están las características principales"
+
+#: radioco/main/templates/main/index.html:30
+msgid "Website"
+msgstr "Página web"
+
+#: radioco/main/templates/main/index.html:31
+msgid ""
+"Make available your shows to the world. Providing a website will make your "
+"station more attractive to listeners"
+msgstr ""
+"Haz que tus programas esten disponibles para todo el mundo. Teniendo una web "
+"hará que tu emisora atraiga mas oyentes"
+
+#: radioco/main/templates/main/index.html:36
+msgid "Scheduler"
+msgstr "Programador"
+
+#: radioco/main/templates/main/index.html:37
+msgid ""
+"Create your schedule dragging and dropping shows onto the calendar. The "
+"system takes care of recording them automatically."
+msgstr ""
+"Crea tu parrilla arrastrando y soltando los programas en el calendario. El "
+"sistema se ocupa automáticamente de grabarlos."
+
+#: radioco/main/templates/main/index.html:42
+msgid "Permissions"
+msgstr "Permisos"
+
+#: radioco/main/templates/main/index.html:43
+msgid ""
+"Managing users can be tricky, RadioCo has a permission system to make things "
+"easier. Give your staff the right access."
+msgstr ""
+"Administrar usuarios puede ser complicado, RadioCo cuenta con un sistema de "
+"permisos para hacerlo más fácil. Dale a tus usuarios el acceso necesario."
+
+#: radioco/main/templates/main/index.html:61
+msgid "Collaborators"
+msgstr "Colaboradores"
+
+#: radioco/main/templates/main/index.html:65
+msgid "Awards"
+msgstr "Premios"
+
+#: radioco/main/templates/main/index.html:69
+msgid "Hours recorded"
+msgstr "Horas grabadas"
+
+#: radioco/main/templates/main/index.html:86
+msgid "News"
+msgstr "Noticias"
+
+#: radioco/main/templates/main/index.html:113
+#: radioco/main/templates/main/index.html:125
+#: radioco/main/templates/main/index.html:137
+#: radioco/main/templates/main/installation.html:60
+#: radioco/main/templates/main/installation.html:79
+#: radioco/main/templates/main/installation.html:97
+msgid "Read more"
+msgstr "Leer más"
+
+#: radioco/main/templates/main/index.html:149
+#: radioco/main/templates/main/index.html:150
+msgid "Setup Guide"
+msgstr "Guía de instalación"
+
+#: radioco/main/templates/main/installation.html:7
+msgid "Installation"
+msgstr "Instalación"
+
+#: radioco/main/templates/main/installation.html:8
+msgid "Follow this easy steps to get started."
+msgstr "Sigue estos sencillos pasos para empezar."
+
+#: radioco/main/templates/main/installation.html:31
+msgid "Ecosystem"
+msgstr "Ecosistema"
+
+#: radioco/main/templates/main/installation.html:35
+msgid "Find out more information about each component."
+msgstr "Descubre más información acerca de cada componente."
+
+#: radioco/main/templates/main/installation.html:57
+msgid "The core of this project runs on a web application."
+msgstr "El núcleo de este proyecto funciona en una aplicación web"
+
+#: radioco/main/templates/main/installation.html:72
+msgid "Recorder software"
+msgstr "Programa grabador"
+
+#: radioco/main/templates/main/installation.html:76
+msgid ""
+"The recorder app runs over Linux and communicates automatically with the web "
+"app"
+msgstr ""
+"La aplicación grabadora funciona sobre Linux y se comunica automáticamente "
+"con la web"
+
+#: radioco/main/templates/main/installation.html:94
+msgid "Third party Android application."
+msgstr "Aplicación Android que pertenece a otro proyecto"
+
+#: radioco/main/templates/main/snippets/contact.html:8
+msgid "Contact us"
+msgstr "Contáctanos"
+
+#: radioco/main/templates/main/snippets/contact.html:11
+msgid "And we will get in touch as soon as possible."
+msgstr ""
+
+#: radioco/main/templates/main/snippets/footer.html:9
+msgid "INFORMATION"
+msgstr "INFORMACIÓN"
+
+#: radioco/main/templates/main/snippets/footer.html:12
+#: radioco/main/templates/main/snippets/header.html:18
+msgid "Documentation"
+msgstr "Documentación"
+
+#: radioco/main/templates/main/snippets/footer.html:16
+msgid "Get Involve"
+msgstr "Participa"
+
+#: radioco/main/templates/main/snippets/footer.html:29
+msgid "DONATE"
+msgstr "DONA"
+
+#: radioco/main/templates/main/snippets/footer.html:30
+msgid ""
+"Donate to support our effort in developing free and open source software."
+msgstr ""
+"Dona para contribuir a nuestro esfuerzo por desarrollar software libre."
+
+#: radioco/main/templates/main/snippets/footer.html:41
+msgid "LICENSE"
+msgstr "LICENCIA"
+
+#: radioco/main/templates/main/snippets/footer.html:47
+msgid "This work by"
+msgstr "Este trabajo de"
+
+#: radioco/main/templates/main/snippets/footer.html:49
+msgid "is licensed under a"
+msgstr "está licenciado bajo una"
+
+#: radioco/main/templates/main/snippets/footer.html:50
+msgid "Creative Commons Attribution 4.0 International License"
+msgstr "Licencia Creative Commons de Reconocimiento 4.0 Internacional"
+
+#: radioco/main/templates/main/snippets/footer.html:61
+msgid "Template:"
+msgstr "Plantilla"
+
+#: radioco/main/templates/main/snippets/footer.html:65
+msgid "Project"
+msgstr "Proyecto"
+
+#: radioco/main/templates/main/snippets/header.html:11
+msgid "Fast"
+msgstr "Rápido"
+
+#: radioco/main/templates/main/snippets/header.html:12
+msgid "Reliable"
+msgstr "Fiable"
+
+#: radioco/main/templates/main/snippets/header.html:14
+msgid "Free software"
+msgstr "Software Libre"
+
+#: radioco/main/templates/main/snippets/header.html:17
+msgid ""
+"RadioCo is a radio management application suitable for community radios that "
+"makes easy scheduling, live recording and publishing."
+msgstr ""
+"Radioco es un sistema de administración de radios apropiado para radios "
+"comunitarias que hace que programar, grabar y publicar en directo sea una "
+"tarea fácil"
+
+#: radioco/main/templates/main/snippets/header.html:19
+msgid "Setup"
+msgstr "Configuración"
+
+#: radioco/main/templates/main/snippets/installation_steps.html:9
+msgid "Installation Steps"
+msgstr "Pasos de instalación"
+
+#: radioco/main/templates/main/snippets/installation_steps.html:11
+msgid "Follow this steps to get started"
+msgstr "Sigue estos pasos para comenzar"
+
+#: radioco/main/templates/main/snippets/menu.html:15
+msgid "Home"
+msgstr "Inicio"
+
+#: radioco/main/templates/main/snippets/menu.html:17
+#: radioco/main/templates/main/snippets/menu.html:55
+msgid "Download"
+msgstr "Descarga"
+
+#: radioco/main/templates/main/snippets/menu.html:26 radioco/settings.py:115
+msgid "English"
+msgstr "Inglés"
+
+#: radioco/main/templates/main/snippets/menu.html:37
+msgid "Español"
+msgstr "Español"
+
+#: radioco/main/templates/main/snippets/menu.html:53
+msgid "Blog"
+msgstr "Blog"
+
+#: radioco/main/templates/main/snippets/menu.html:60
+msgid "Contact Us"
+msgstr "Contáctanos"
+
+#: radioco/main/templates/main/snippets/stations.html:9
+msgid "Stations"
+msgstr "Emisoras"
+
+#: radioco/main/templates/main/snippets/stations.html:12
+msgid "Radio stations currently using this software:"
+msgstr "Emisoras usando actualmente este proyecto:"
+
+#: radioco/main/templates/main/snippets/team.html:9
+msgid "Contributors"
+msgstr "Participantes"
+
+#: radioco/main/templates/main/snippets/team.html:12
+msgid "Discover the people who made this possible"
+msgstr "Descubre a la gente que ha hecho esto posible"
+
+#: radioco/main/templates/main/snippets/team.html:42
+msgid ""
+"Is your name missing or your are not happy with something? Contact us in the "
+"form below."
+msgstr ""
+"Quieres que tu nombre aparezca aquí o tienes alguna sugerencia? Contáctanos "
+"en el siguiente formulario"
+
+#: radioco/main/templates/main/snippets/timeline.html:9
+msgid "Events & Talks"
+msgstr "Eventos y Charlas"
+
+#: radioco/main/templates/main/snippets/timeline.html:11
+msgid ""
+"We're all about making it as simple as possible to discover how to use "
+"RadioCo."
+msgstr "Descubre que puede hacer RadioCo por ti"
+
+#: radioco/main/templates/tmp_transalation/about/steps.html:2
+#: radioco/main/templates/tmp_transalation/installation/steps.html:2
+msgid "1. Install docker engine"
+msgstr "1. Instala docker"
+
+#: radioco/main/templates/tmp_transalation/about/steps.html:3
+#: radioco/main/templates/tmp_transalation/installation/steps.html:3
+msgid "Docker is a platform to run applications with containers"
+msgstr ""
+"Docker es una plataforma que automatiza el despliegue de aplicaciones dentro "
+"de contenedores de software"
+
+#: radioco/main/templates/tmp_transalation/about/steps.html:4
+#: radioco/main/templates/tmp_transalation/installation/steps.html:4
+msgid "2. Install web app"
+msgstr "2. Instala la aplicación web"
+
+#: radioco/main/templates/tmp_transalation/about/steps.html:5
+#: radioco/main/templates/tmp_transalation/installation/steps.html:5
+msgid "The core of the project"
+msgstr "El núcleo del proyecto"
+
+#: radioco/main/templates/tmp_transalation/about/steps.html:6
+#: radioco/main/templates/tmp_transalation/installation/steps.html:6
+msgid "3. Install recorder software"
+msgstr "3. Instala la aplicación grabadora"
+
+#: radioco/main/templates/tmp_transalation/about/steps.html:7
+#: radioco/main/templates/tmp_transalation/installation/steps.html:7
+msgid "Automatic audio recorder"
+msgstr "Grabador de audio automático"
+
+#: radioco/main/templates/tmp_transalation/about/steps.html:8
+#: radioco/main/templates/tmp_transalation/installation/steps.html:8
+msgid "4. Radiocom"
+msgstr "4. Radiocom"
+
+#: radioco/main/templates/tmp_transalation/about/steps.html:9
+#: radioco/main/templates/tmp_transalation/installation/steps.html:9
+msgid "Reach more users using an Android application"
+msgstr "LLega a mas oyentes proporcionando una aplicación móvil"
+
+#: radioco/main/templates/tmp_transalation/about/team.html:2
+msgid "Designer"
+msgstr "Diseñador"
+
+#: radioco/main/templates/tmp_transalation/about/team.html:3
+msgid "RadioCo trademark design"
+msgstr "Creación de logotipo e identidad"
+
+#: radioco/main/templates/tmp_transalation/about/team.html:4
+msgid "Radio Corax Developer"
+msgstr "Programador Radio Corax"
+
+#: radioco/main/templates/tmp_transalation/about/team.html:5
+#, fuzzy
+#| msgid "Contributors"
+msgid "Main Contributor"
+msgstr "Principal colaborador"
+
+#: radioco/main/templates/tmp_transalation/about/team.html:6
+#: radioco/main/templates/tmp_transalation/about/team.html:8
+#: radioco/main/templates/tmp_transalation/about/team.html:10
+#: radioco/main/templates/tmp_transalation/about/team.html:12
+#: radioco/main/templates/tmp_transalation/about/team.html:16
+msgid "Developer"
+msgstr "Programador"
+
+#: radioco/main/templates/tmp_transalation/about/team.html:7
+#, fuzzy
+#| msgid "Contributors"
+msgid "Contributor"
+msgstr "Participantes"
+
+#: radioco/main/templates/tmp_transalation/about/team.html:9
+msgid "Director and contributor"
+msgstr "Director y colaborador"
+
+#: radioco/main/templates/tmp_transalation/about/team.html:11
+msgid "Radiocom"
+msgstr ""
+
+#: radioco/main/templates/tmp_transalation/about/team.html:13
+msgid "Radiocom integration"
+msgstr "Integración de Radiocom"
+
+#: radioco/main/templates/tmp_transalation/about/team.html:14
+msgid "Feedback"
+msgstr "Retroalimentación"
+
+#: radioco/main/templates/tmp_transalation/about/team.html:15
+msgid "Special mention to @bealume @isalema"
+msgstr "Mención especial a @bealume @isalema"
+
+#: radioco/main/templates/tmp_transalation/about/team.html:17
+msgid "RadioCo Author"
+msgstr "Autor de RadioCo"
+
+#: radioco/main/templates/tmp_transalation/index/stations.html:2
+msgid "Radio Corax"
+msgstr "Radio Corax"
+
+#: radioco/main/templates/tmp_transalation/index/stations.html:3
+#: radioco/main/templates/tmp_transalation/index/stations.html:5
+msgid "Germany, Halle"
+msgstr "Alemania, Halle"
+
+#: radioco/main/templates/tmp_transalation/index/stations.html:4
+msgid "Cuac FM"
+msgstr ""
+
+#: radioco/main/templates/tmp_transalation/index/timeline.html:2
+msgid "Annual conference of Federal Association of Free Radios"
+msgstr "Conferencia anual de la Asociación Mundial de Radios Comunitarias"
+
+#: radioco/main/templates/tmp_transalation/index/timeline.html:3
+msgid "21/10/2016 - Germany"
+msgstr ""
+
+#: radioco/main/templates/tmp_transalation/index/timeline.html:4
+#: radioco/main/templates/tmp_transalation/index/timeline.html:19
+msgid "Germany, Halle (Saale)"
+msgstr "Alemania, Halle (Saale)"
+
+#: radioco/main/templates/tmp_transalation/index/timeline.html:5
+msgid "Escola de Verán de CUAC FM"
+msgstr ""
+
+#: radioco/main/templates/tmp_transalation/index/timeline.html:6
+msgid "15/07/2016 - Spain"
+msgstr ""
+
+#: radioco/main/templates/tmp_transalation/index/timeline.html:7
+#: radioco/main/templates/tmp_transalation/index/timeline.html:28
+#: radioco/main/templates/tmp_transalation/index/timeline.html:31
+msgid "Spain, A Coruña"
+msgstr "España, La Coruña"
+
+#: radioco/main/templates/tmp_transalation/index/timeline.html:8
+msgid "Segundo Encuentro Europeo de Medios Comunitarios"
+msgstr ""
+
+#: radioco/main/templates/tmp_transalation/index/timeline.html:9
+msgid "12/03/2016 - Spain"
+msgstr ""
+
+#: radioco/main/templates/tmp_transalation/index/timeline.html:10
+msgid "Spain, Madrid"
+msgstr ""
+
+#: radioco/main/templates/tmp_transalation/index/timeline.html:11
+msgid "Xornada de Ondas Libres e Comunitarias"
+msgstr ""
+
+#: radioco/main/templates/tmp_transalation/index/timeline.html:12
+msgid "23/01/2016 - Spain"
+msgstr ""
+
+#: radioco/main/templates/tmp_transalation/index/timeline.html:13
+#: radioco/main/templates/tmp_transalation/index/timeline.html:16
+#: radioco/main/templates/tmp_transalation/index/timeline.html:25
+msgid "Spain, Santiago de Compostela"
+msgstr "España, Santiago de Compostela"
+
+#: radioco/main/templates/tmp_transalation/index/timeline.html:14
+msgid "Xornada de Boas Prácticas de Software Libre para ONGs"
+msgstr ""
+
+#: radioco/main/templates/tmp_transalation/index/timeline.html:15
+msgid "22/10/2015 - Spain"
+msgstr ""
+
+#: radioco/main/templates/tmp_transalation/index/timeline.html:17
+msgid "Radio Archives in European Community Media"
+msgstr ""
+
+#: radioco/main/templates/tmp_transalation/index/timeline.html:18
+msgid "05/06/2015 - Germany"
+msgstr ""
+
+#: radioco/main/templates/tmp_transalation/index/timeline.html:20
+msgid "14th edition of Technological Projects"
+msgstr "14º Concurso de Proyectos Tecnológicos"
+
+#: radioco/main/templates/tmp_transalation/index/timeline.html:21
+msgid "02/12/2014 - Spain, Ourense"
+msgstr ""
+
+#: radioco/main/templates/tmp_transalation/index/timeline.html:22
+msgid "Spain, Ourense"
+msgstr "España, Orense"
+
+#: radioco/main/templates/tmp_transalation/index/timeline.html:23
+msgid "VII edition of Best Final Project with Free Software"
+msgstr "VII edición del Premio al mejor PFC"
+
+#: radioco/main/templates/tmp_transalation/index/timeline.html:24
+msgid "17/10/2014 - Spain"
+msgstr ""
+
+#: radioco/main/templates/tmp_transalation/index/timeline.html:26
+msgid "Project exposition"
+msgstr "Exposición del proyecto"
+
+#: radioco/main/templates/tmp_transalation/index/timeline.html:27
+msgid "15/09/2014 - Spain"
+msgstr ""
+
+#: radioco/main/templates/tmp_transalation/index/timeline.html:29
+msgid "Encuentro 14"
+msgstr ""
+
+#: radioco/main/templates/tmp_transalation/index/timeline.html:30
+msgid "13/04/2014 - Spain"
+msgstr ""
+
+#: radioco/main/views.py:16
+msgid "Galician Language"
+msgstr "Idioma Gallego"
+
+#: radioco/main/views.py:20
+msgid "Spanish Language"
+msgstr "Idioma Español"
+
+#: radioco/main/views.py:24
+msgid "German Language"
+msgstr "Idioma Alemán"
+
+#: radioco/main/views.py:28
+msgid "English Language"
+msgstr "Idioma Inglés"
+
+#: radioco/settings.py:114
+msgid "Spanish"
+msgstr "Español"

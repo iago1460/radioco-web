@@ -1,0 +1,154 @@
+{% extends 'main/base.html' %}
+{% load i18n staticfiles %}
+
+{% block content %}
+
+{% include 'main/snippets/header.html' %}
+
+<section id="services" class="front-page-section">
+    <div class="section-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h3>Features</h3>
+                </div><!--/.col-sm-12-->
+                <div class="col-sm-10 col-sm-offset-1">
+                    <p>
+                        {% trans "RadioCo is a user-friendly system with an intuitive drag-and-drop interface." %}
+                        {% trans "Here are the main features:" %}
+                    </p>
+                </div><!--/.col-sm-10.col-sm-offset-1-->
+            </div><!--/.row-->
+        </div><!--/.container-->
+    </div><!--/.section-header-->
+    <div class="section-content">
+        <div class="container">
+            <div class="row inline-columns">
+                <div id="illdy_service-2" class="col-sm-4 widget_illdy_service">
+                    <div class="service" style="color: #6384dd";>
+                        <div class="service-icon"><i class="fas fa-globe"></i></div><!--/.service-icon-->
+                        <div class="service-title"><h5>{% trans "Website" %}</h5></div><!--/.service-title-->
+                        <div class="service-entry">{% trans "Make available your shows to the world. Providing a website will make your station more attractive to listeners" %}
+                        </div><!--/.service-entry--></div><!--/.service--></div>
+                <div id="illdy_service-3" class="col-sm-4 widget_illdy_service">
+                    <div class="service" style="color: #f18b6d";>
+                        <div class="service-icon"><i class="far fa-calendar-alt"></i></div><!--/.service-icon-->
+                        <div class="service-title"><h5>{% trans "Scheduler" %}</h5></div><!--/.service-title-->
+                        <div class="service-entry">{% trans "Create your schedule dragging and dropping shows onto the calendar. The system takes care of recording them automatically." %}
+                        </div><!--/.service-entry--></div><!--/.service--></div>
+                <div id="illdy_service-4" class="col-sm-4 widget_illdy_service">
+                    <div class="service" style="color: #6a4d8a";>
+                        <div class="service-icon"><i class="fas fa-users"></i></div><!--/.service-icon-->
+                        <div class="service-title"><h5>{% trans "Permissions" %}</h5></div><!--/.service-title-->
+                        <div class="service-entry">{% trans "Managing users can be tricky, RadioCo has a permission system to make things easier. Give your staff the right access." %}
+                        </div><!--/.service-entry--></div><!--/.service--></div>
+            </div><!--/.row-->
+        </div><!--/.container-->
+    </div><!--/.section-content-->
+</section><!--/#services.front-page-section-->
+
+{% include 'main/snippets/timeline.html' %}
+
+
+<section id="counter" class="counter front-page-section"
+         style="background-image: url({% static 'main/images/esquema-proyecto.jpg' %});">
+    <div class="counter-overlay"></div>
+    <div class="container">
+        <div class="row inline-columns">
+            <div id="illdy_counter-3" class="col-sm-4 widget_illdy_counter"><span class="counter-number" data-from="1"
+                                                                                  data-to="7" data-speed="2000"
+                                                                                  data-refresh-interval="100"></span><span
+                    class="counter-description">{% trans "Collaborators" %}</span></div>
+            <div id="illdy_counter-4" class="col-sm-4 widget_illdy_counter"><span class="counter-number" data-from="1"
+                                                                                  data-to="4" data-speed="3000"
+                                                                                  data-refresh-interval="100"></span><span
+                    class="counter-description">{% trans "Awards" %}</span></div>
+            <div id="illdy_counter-2" class="col-sm-4 widget_illdy_counter"><span class="counter-number" data-from="1"
+                                                                                  data-to="9999" data-speed="2000"
+                                                                                  data-refresh-interval="100"></span><span
+                    class="counter-description">{% trans "Hours recorded" %} </span></div>
+        </div><!--/.row-->
+    </div><!--/.container-->
+</section><!--/#counter.front-page-section-->
+
+
+
+{% include 'main/snippets/stations.html' %}
+
+
+
+
+<section id="latest-news" class="front-page-section">
+    <div class="section-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h3>{% trans "News" %}</h3>
+                </div><!--/.col-sm-12-->
+                <!--<div class="col-sm-10 col-sm-offset-1">-->
+                    <!--<p>If you are interested in the latest articles in the industry, take a sneak peek at our blog. You-->
+                        <!--have nothing to loose!</p>-->
+                <!--</div>&lt;!&ndash;/.col-sm-10.col-sm-offset-1&ndash;&gt;-->
+            </div><!--/.row-->
+        </div><!--/.container-->
+    </div><!--/.section-header-->
+
+    <div class="section-content">
+        <div class="container">
+            <div class="row">
+
+                {% if LANGUAGE_CODE != 'es' %}
+                <div class="col-xs-12 warning-section">
+                    News only available in Spanish
+                </div>
+                {% endif %}
+                <div class="illdy-blog-post col-md-4 col-sm-6 col-xs-12">
+                    <div class="post" style="padding-top: 40px;">
+                        <a href="{% url 'mejor_pfc_vii_edicion' %}" title="VII edición del Premio al mejor PFC"
+                           class="post-title">VII edición del Premio al mejor PFC</a>
+                        <div class="post-entry">
+                            <p>RadioCo consigue un accésit en la VII edición del Premio al mejor PFC con licencia libre [&hellip;]</p>
+                        </div><!--/.post-entry-->
+                        <a href="{% url 'mejor_pfc_vii_edicion' %}" title="Read more"
+                           class="post-button"><i class="fa fa-chevron-circle-right"></i> {% trans "Read more" %} </a>
+                    </div><!--/.post-->
+                </div><!--/.col-sm-4-->
+
+                <div class="illdy-blog-post col-md-4 col-sm-6 col-xs-12">
+                    <div class="post" style="padding-top: 40px;">
+                        <a href="{% url 'premio_concurso_proyectos_tecnologicos' %}" title="14º Concurso de Proyectos Tecnológicos"
+                           class="post-title">14º Concurso de Proyectos Tecnológicos</a>
+                        <div class="post-entry">
+                            <p>RadioCo recibe el premio del público y un segundo premio en el 14º Concurso de Proyectos Tecnológicos [&hellip;]</p>
+                        </div><!--/.post-entry-->
+                        <a href="{% url 'premio_concurso_proyectos_tecnologicos' %}" title="Read more"
+                           class="post-button"><i class="fa fa-chevron-circle-right"></i> {% trans "Read more" %} </a>
+                    </div><!--/.post-->
+                </div><!--/.col-sm-4-->
+
+                <div class="illdy-blog-post col-md-4 col-sm-6 col-xs-12">
+                    <div class="post" style="padding-top: 40px;">
+                        <a href="{% url 'premio_chuza' %}" title="Primer Certamen de aplicaciones libre Chuza"
+                           class="post-title">Primer Certamen de aplicaciones libre Chuza</a>
+                        <div class="post-entry">
+                            <p>En esta primera edición del concurso el jurado premió a [&hellip;]</p>
+                        </div><!--/.post-entry-->
+                        <a href="{% url 'premio_chuza' %}" title="Read more"
+                           class="post-button"><i class="fa fa-chevron-circle-right"></i> {% trans "Read more" %} </a>
+                    </div><!--/.post-->
+                </div><!--/.col-sm-4-->
+                <div class="clearfix"></div>
+            </div><!--/.row-->
+        </div><!--/.container-->
+    </div><!--/.section-content-->
+</section><!--/#latest-news.front-page-section-->
+
+
+
+<section class="front-page-section next-section">
+    <a href="{% url 'installation' %}" title="{% trans "Setup Guide" %}" class="latest-news-button"><i
+            class="fa fa-chevron-circle-right"></i> {% trans "Setup Guide" %}</a>
+</section><!--/#latest-news.front-page-section-->
+
+
+{% endblock %}

@@ -1,0 +1,3 @@
+template: main/index.html
+stations: !include stations.yml
+timeline: !include timeline.yml

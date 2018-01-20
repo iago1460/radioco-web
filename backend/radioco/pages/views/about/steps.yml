@@ -1,0 +1,37 @@
+images_path: main/images/installation_steps/
+translatable_fields:
+  - title
+  - description
+items:
+  - title: 1. Install docker engine
+    image: docker_logo.jpg
+    description: Docker is a platform to run applications with containers
+    resources:
+      - type: link
+        title: Docker
+        icon: fab fa-docker
+        url: https://docs.docker.com/install/
+  - title: 2. Install web app
+    image: radioco_web.jpg
+    description: The core of the project
+    resources:
+      - type: link
+        title: RadioCo Web App
+        icon: fas fa-podcast
+        url: http://django-radio.readthedocs.io/en/latest/installation/install_web_app.html
+  - title: 3. Install recorder software
+    image: rpi_grabador.jpg
+    description: Automatic audio recorder
+    resources:
+      - type: link
+        title: RadioCo Recorder
+        icon: fas fa-microphone
+        url: http://django-radio.readthedocs.io/en/latest/installation/install_recorder_program.html
+  - title: 4. Radiocom
+    image: radiocom.jpg
+    description: Reach more users using an Android application
+    resources:
+      - type: link
+        title: Radiocom
+        icon: fab fa-android
+        url: http://django-radio.readthedocs.io/en/latest/api/index.html#radiocom-api

@@ -1,0 +1,55 @@
+{% extends 'main/base.html' %}
+{% load i18n staticfiles %}
+
+{% block content %}
+
+{% get_current_language as LANGUAGE_CODE %}
+{% trans 'About' as header %}
+{% include 'main/snippets/simple_header.html' %}
+
+<section id="history" class="front-page-section section-history">
+    <div class="section-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h3>{% trans "History" %}</h3>
+                </div>
+            </div><!--/.row-->
+        </div><!--/.container-->
+    </div><!--/.section-header-->
+    <div class="section-content">
+        <div class="container container-about">
+            <div class="row">
+                <div class="col-sm-8 col-sm-offset-2">
+                    <p>
+                        {% blocktrans trimmed %}
+                        RadioCo started in 2014 as a Iago Veloso's dissertation project, originally named
+                        "Live broadcast automatic recording for a Community radio station with Free Software"
+                        was created to provide a automated recording system to Cuac FM.
+                        Since then successfully produces high quality podcasts every day.
+                        {% endblocktrans %}
+                    </p>
+                    <p>
+                        {% blocktrans trimmed %}
+                        This is an Open Source project, which means everybody can contribute on it.
+                        Everything you see here, from the documentation to the code itself, was created by and for the
+                        community.
+                        {% endblocktrans %}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="front-page-section counter counter-alt"
+         style="background-image: url({% static 'main/images/panel_radioco.jpg' %});">
+    <div class="counter-overlay"></div>
+</section><!--/#counter.front-page-section-->
+
+
+{% include 'main/snippets/team.html' %}
+
+
+{% endblock %}

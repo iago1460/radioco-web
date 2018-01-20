@@ -1,0 +1,208 @@
+{% load i18n staticfiles %}
+
+{% get_available_languages as languages %}
+{% get_current_language as LANGUAGE_CODE %}
+
+<!DOCTYPE html>
+<html lang="es-ES" prefix="og: http://ogp.me/ns#">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Inicio &gt; RadioCo</title>
+
+    <link rel="icon" type="image/png" href="{% static 'main/favicon.ico' %}">
+
+    {% for lang_code, lang_name in languages %}
+        {% language lang_code %}
+            <meta property="og:locale{% if lang_code != LANGUAGE_CODE %}:alternate{% endif %}" content="{{ lang_code }}"/>
+        {% endlanguage %}
+    {% endfor %}
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="Inicio &gt; RadioCo"/>
+    <meta property="og:url" content="http://radioco.org/inicio/"/>
+    <meta property="og:site_name" content="RadioCo"/>
+    <meta name="theme-color" content="#DD281B"/>
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:title" content="Inicio &gt; RadioCo"/>
+    <meta name="twitter:site" content="@RadioCo_org"/>
+    <meta name="twitter:creator" content="@RadioCo_org"/>
+
+    <!-- / Preload resources. -->
+    <link rel="preload" href="{% static 'main/images/cascos_radioco.jpg' %}" as="image">
+    <link rel="preload" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" as="style" crossorigin="anonymous">
+    <link rel="preload" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" as="style" crossorigin="anonymous">
+    <link rel="preload" href="{% static 'main/css/main.css' %}" as="style">
+    <link rel='dns-prefetch' href='//fonts.googleapis.com'/>
+
+
+    <link rel='stylesheet' id='illdy-google-fonts-css'
+          href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,900,700,300,300italic' type='text/css'
+          media='all'/>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!--<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">-->
+    <!--<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">-->
+
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+    <!--<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">-->
+    <!--<link href="http://radioco.org/wp-content/themes/illdy/layout/css/font-awesome.min.css?ver=4.5.0" rel="stylesheet">-->
+    <!--<link rel='stylesheet' id='owl-carousel-css'-->
+          <!--href='http://radioco.org/wp-content/themes/illdy/layout/css/owl-carousel.min.css?ver=2.0.0' type='text/css'-->
+          <!--media='all'/>-->
+    <!--<link rel='stylesheet' id='illdy-main-css'-->
+          <!--href='http://radioco.org/wp-content/themes/illdy/layout/css/main.css?ver=4.7.9' type='text/css' media='all'/>-->
+    <!--<link rel='stylesheet' id='illdy-custom-css'-->
+          <!--href='http://radioco.org/wp-content/themes/illdy/layout/css/custom.min.css?ver=4.7.9' type='text/css'-->
+          <!--media='all'/>-->
+    <link href="{% static 'main/css/main.css' %}" rel="stylesheet" type="text/css"/>
+
+    <!--<link rel='stylesheet' id='jetpack_css-css'-->
+          <!--href='http://radioco.org/wp-content/plugins/jetpack/css/jetpack.css?ver=4.7.1' type='text/css' media='all'/>-->
+    <!--<script defer src="http://code.jquery.com/jquery-1.12.4.min.js"-->
+            <!--integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="-->
+            <!--crossorigin="anonymous"></script>-->
+
+    <script defer
+  src="http://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+    <!--<script defer type="text/javascript">-->
+        <!--/* <![CDATA[ */-->
+        <!--var CrayonSyntaxSettings = {-->
+            <!--"version": "_2.7.2_beta",-->
+            <!--"is_admin": "0",-->
+            <!--"ajaxurl": "http:\/\/radioco.org\/wp-admin\/admin-ajax.php",-->
+            <!--"prefix": "crayon-",-->
+            <!--"setting": "crayon-setting",-->
+            <!--"selected": "crayon-setting-selected",-->
+            <!--"changed": "crayon-setting-changed",-->
+            <!--"special": "crayon-setting-special",-->
+            <!--"orig_value": "data-orig-value",-->
+            <!--"debug": ""-->
+        <!--};-->
+        <!--var CrayonSyntaxStrings = {-->
+            <!--"copy": "Presiona %s para copiar y %s para pegar",-->
+            <!--"minimize": "Click To Expand Code"-->
+        <!--};-->
+        <!--/* ]]> */-->
+    <!--</script>-->
+    <!--<script defer type="text/javascript"-->
+            <!--src='http://radioco.org/wp-content/plugins/crayon-syntax-highlighter/js/min/crayon.min.js?ver=_2.7.2_beta'></script>-->
+    <!--<script defer type="text/javascript"-->
+            <!--src='http://radioco.org/wp-content/plugins/cf7-polylang/public/js/cf7-polylang-public.js?ver=1.4.3'></script>-->
+    <!--<script defer type="text/javascript"-->
+            <!--src='http://radioco.org/wp-content/plugins/responsive-lightbox/assets/nivo/nivo-lightbox.min.js?ver=1.6.12'></script>-->
+    <script defer type="text/javascript">
+        /* <![CDATA[ */
+        var rlArgs = {
+            "script": "nivo",
+            "selector": "lightbox",
+            "customEvents": "",
+            "activeGalleries": "1",
+            "effect": "fade",
+            "clickOverlayToClose": "1",
+            "keyboardNav": "1",
+            "errorMessage": "The requested content cannot be loaded. Please try again later."
+        };
+        /* ]]> */
+    </script>
+    <!--<script defer type="text/javascript"-->
+            <!--src='http://radioco.org/wp-content/plugins/responsive-lightbox/js/front.js?ver=1.6.12'></script>-->
+
+
+    <!--<style type='text/css'>img#wpstats {-->
+        <!--display: none-->
+    <!--}</style>-->
+    <!--<style type="text/css">.pace .pace-progress {-->
+        <!--background-color: #dd281b;-->
+        <!--color: #dd281b;-->
+    <!--}-->
+
+    <!--.pace .pace-activity {-->
+        <!--box-shadow: inset 0 0 0 2px #dd281b, inset 0 0 0 7px #ffffff;-->
+    <!--}-->
+
+    <!--.pace-overlay {-->
+        <!--background-color: #ffffff;-->
+    <!--}</style>&lt;!&ndash; Tracking code easily added by NK Google Analytics &ndash;&gt;-->
+    <!--<script defer type="text/javascript">-->
+        <!--(function (i, s, o, g, r, a, m) {-->
+            <!--i['GoogleAnalyticsObject'] = r;-->
+            <!--i[r] = i[r] || function () {-->
+                <!--(i[r].q = i[r].q || []).push(arguments)-->
+            <!--}, i[r].l = 1 * new Date();-->
+            <!--a = s.createElement(o),-->
+                <!--m = s.getElementsByTagName(o)[0];-->
+            <!--a.async = 1;-->
+            <!--a.src = g;-->
+            <!--m.parentNode.insertBefore(a, m)-->
+        <!--})(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');-->
+        <!--ga('create', 'UA-15717007-3', 'radioco.org');-->
+        <!--ga('send', 'pageview');-->
+    <!--</script>-->
+    <meta name="title" content="Inicio | RadioCo"/>
+    <meta name="description" content="Broadcasting Radio Recording Scheduling System"/>
+    {% for lang_code, lang_name in languages %}
+        {% language lang_code %}
+            <link rel="alternate" href="{% url 'index' %}" hreflang="{{ lang_code }}"/>
+        {% endlanguage %}
+    {% endfor %}
+    <link rel="alternate" href="http://radioco.org/" hreflang="x-default"/>
+</head>
+<body class="home page-template-default page page-id-298 wp-custom-logo">
+
+
+{% block content %}{% endblock %}
+
+{% include 'main/snippets/footer.html' %}
+
+<!--<link rel='stylesheet' id='captcha-style-css'-->
+      <!--href='http://radioco.org/wp-content/plugins/uber-nocaptcha-recaptcha/css/style.css?ver=4.7.9' type='text/css'-->
+      <!--media='all'/>-->
+<!--<script defer type="text/javascript"-->
+        <!--src='http://radioco.org/wp-content/plugins/jetpack/modules/photon/photon.js?ver=20130122'></script>-->
+<!--<script defer type="text/javascript">-->
+    <!--/* <![CDATA[ */-->
+    <!--var wpcf7 = {-->
+        <!--"apiSettings": {-->
+            <!--"root": "http:\/\/radioco.org\/wp-json\/contact-form-7\/v1",-->
+            <!--"namespace": "contact-form-7\/v1"-->
+        <!--}, "recaptcha": {"messages": {"empty": "Por favor, prueba que no eres un robot."}}-->
+    <!--};-->
+    <!--/* ]]> */-->
+<!--</script>-->
+<!--<script defer type="text/javascript"-->
+        <!--src='http://radioco.org/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=4.8.1'></script>-->
+<!--<script defer type="text/javascript" src='https://s0.wp.com/wp-content/js/devicepx-jetpack.js?ver=201803'></script>-->
+<!--<script defer-->
+  <!--src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"-->
+  <!--integrity="sha256-xNjb53/rY+WmG+4L6tTl9m6PpqknWZvRt0rO1SRnJzw="-->
+  <!--crossorigin="anonymous"></script>-->
+<script defer
+  src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+  integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+  crossorigin="anonymous"></script>
+
+<script defer src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<!--<script defer src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>-->
+
+<!--<script defer type="text/javascript"-->
+        <!--src='http://radioco.org/wp-content/themes/illdy/layout/js/owl-carousel/owl-carousel.min.js?ver=2.0.0'></script>-->
+<script defer type="text/javascript" src="{% static 'main/js/count-to/count-to.min.js' %}"></script>
+<script defer type="text/javascript" src="{% static 'main/js/visible/visible.min.js' %}"></script>
+<script defer type="text/javascript" src="{% static 'main/js/plugins.min.js' %}"></script>
+<script defer type="text/javascript" src="{% static 'main/js/scripts.js' %}"></script>
+<!--<script defer type="text/javascript" src='http://radioco.org/wp-includes/js/wp-embed.min.js?ver=4.7.9'></script>-->
+<!--<script defer type="text/javascript" src='//www.google.com/recaptcha/api.js?render=explicit&#038;ver=2.0'></script>-->
+<!--<script defer type="text/javascript"-->
+        <!--src='http://radioco.org/wp-content/plugins/uber-nocaptcha-recaptcha/js/recaptcha.js?ver=1.0'></script>-->
+<!--<script defer type="text/javascript" src='https://stats.wp.com/e-201803.js' async defer></script>-->
+<script defer type="text/javascript">
+    _stq = window._stq || [];
+    _stq.push(['view', {v: 'ext', j: '1:4.7.1', blog: '123290369', post: '298', tz: '1', srv: 'radioco.org'}]);
+    _stq.push(['clickTrackerInit', '123290369', '298']);
+</script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+{% extends 'main/base.html' %}
+{% load i18n staticfiles %}
+
+{% block content %}
+
+   <link rel='stylesheet' id='crayon-css'
+             href='{% static 'main/css/crayon-syntax-highlighter/min/crayon.min.css' %}'
+             type='text/css' media='all'/>
+   <link rel='stylesheet' id='crayon-theme-classic-css'  href='{% static 'main/css/crayon-syntax-highlighter/classic.css' %}' type='text/css' media='all' />
+   <script defer type="text/javascript">
+       /* <![CDATA[ */
+       var CrayonSyntaxSettings = {
+           "version": "_2.7.2_beta",
+           "is_admin": "0",
+           "ajaxurl": "http:\/\/radioco.org\/wp-admin\/admin-ajax.php",
+           "prefix": "crayon-",
+           "setting": "crayon-setting",
+           "selected": "crayon-setting-selected",
+           "changed": "crayon-setting-changed",
+           "special": "crayon-setting-special",
+           "orig_value": "data-orig-value",
+           "debug": ""
+       };
+       var CrayonSyntaxStrings = {
+           "copy": "Presiona %s para copiar y %s para pegar",
+           "minimize": "Click To Expand Code"
+       };
+       /* ]]> */
+   </script>
+   <script defer type="text/javascript"src='{% static 'main/js/crayon-syntax-highlighter/crayon.min.js' %}'></script>
+
+
+    <link rel='stylesheet' id='responsive-lightbox-nivo-css'
+          href='{% static 'main/css/nivo/nivo-lightbox.min.css' %}'
+          type='text/css' media='all'/>
+    <link rel='stylesheet' id='responsive-lightbox-nivo-default-css'
+          href='{% static 'main/css/nivo/themes/default/default.css' %}'
+          type='text/css' media='all'/>
+    <script defer type="text/javascript"
+          src='{% static 'main/js/nivo/nivo-lightbox.min.js' %}'></script>
+    <script defer type="text/javascript">
+        /* <![CDATA[ */
+        var rlArgs = {
+            "script": "nivo",
+            "selector": "lightbox",
+            "customEvents": "",
+            "activeGalleries": "1",
+            "effect": "fade",
+            "clickOverlayToClose": "1",
+            "keyboardNav": "1",
+            "errorMessage": "The requested content cannot be loaded. Please try again later."
+        };
+        /* ]]> */
+    </script>
+    <script defer type="text/javascript"
+            src='http://radioco.org/wp-content/plugins/responsive-lightbox/js/front.js?ver=1.6.12'></script>
+
+
+
+{% with title as header %}
+   {% include 'main/snippets/simple_header.html' %}
+{% endwith %}
+
+<div class="container">
+   <div class="row">
+      <div class="col-sm-8 col-sm-offset-2">
+         <section id="blog">
+            <article id="post-6" class="blog-post post-6 page type-page status-publish hentry">
+               {% include article_template %}
+            </article>
+         </section>
+      </div>
+   </div>
+</div>
+{% endblock %}

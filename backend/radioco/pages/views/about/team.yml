@@ -1,0 +1,77 @@
+images_path: main/images/team/
+translatable_fields:
+  - role
+  - description
+items:
+  - name: Víctor Tojo
+    image: victor_tojo.jpg
+    role: Designer
+    description: RadioCo trademark design
+    resources:
+      - type: icon_link
+        title: Web
+        icon: fas fa-globe
+        url: http://victortojo.com/
+  - name: Stefan Walluhn
+    image: stefan_walluhn.jpeg
+    role: Radio Corax Developer
+    description: Main Contributor
+    resources:
+      - type: icon_link
+        title: Web
+        icon: fab fa-github
+        url: https://github.com/stefan-walluhn
+  - name: Álex Cortiñas
+    image: alex_cortinas.jpeg
+    role: Developer
+    description: Contributor
+    resources:
+      - type: icon_link
+        title: Web
+        icon: fab fa-github
+        url: https://github.com/AlexCortinas
+  - name: Chema Casanova
+    image: chema_casanova.jpg
+    role: Developer
+    description: Director and contributor
+    resources:
+      - type: icon_link
+        title: Web
+        icon: fab fa-github
+        url: https://github.com/txenoo
+  - name: Fernando Souto Gonzalez
+    image: fernando_souto.png
+    role: Developer
+    description: Radiocom
+    resources:
+      - type: icon_link
+        title: Web
+        icon: fab fa-github
+        url: https://github.com/ficiverson
+  - name: Pablo Grela
+    image: pablo_grela.jpeg
+    role: Developer
+    description: Radiocom integration
+    resources:
+      - type: icon_link
+        title: Web
+        icon: fab fa-github
+        url: https://github.com/pablogrela
+  - name: Cuac FM people
+    image: cuac_fm.png
+    role: Feedback
+    description: Special mention to @bealume @isalema
+    resources:
+      - type: icon_link
+        title: Web
+        icon: fas fa-globe
+        url: https://cuacfm.org/
+  - name: Iago Veloso
+    image: iago_veloso.jpeg
+    role: Developer
+    description: RadioCo Author
+    resources:
+      - type: icon_link
+        title: Web
+        icon: fab fa-linkedin
+        url: https://www.linkedin.com/in/iagovelosoabalo/

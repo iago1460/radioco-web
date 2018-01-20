@@ -1,0 +1,30 @@
+version: '3.0'
+services:
+
+# Application Containers ------------------------------------------------------
+
+  django:
+    restart: always
+    build:
+      context: docker/django
+      args:
+        requirements: requirements.txt
+    environment:
+      - ENVIRONMENT_TYPE=live
+      - SECRET_KEY
+      - HOST_NAME
+    expose:
+      - 8000
+    ports:
+      - "${PORT_BACKEND}:8000"
+    volumes:
+      - ./backend:/backend
+    command: uwsgi --http 0.0.0.0:8000 --ini /uwsgi.ini
+
+  sass:
+    build:
+      context: docker/sass
+    volumes:
+       - ./backend/radioco/main/static/main/:/workdir
+    working_dir: /workdir
+    command: echo nothing to run
