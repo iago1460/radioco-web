@@ -9,13 +9,14 @@ Usage:
     run [COMMAND] [ARGS...]
 
 Commands:
-    start               Setup a new environment
+    start               Setup a production environment
+    start_dev           Setup a development environment
     translate           Generate and compile translations
 
 If an unknown command is specified, it will be passed to docker-compose. e.g:
     run up -d
     run logs
-    run exec backend bash
+    run exec django bash
 
 EOF
 }

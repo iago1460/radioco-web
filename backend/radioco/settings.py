@@ -26,7 +26,7 @@ SECRET_KEY = os.environ['SECRET_KEY']
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = bool(os.environ['ENVIRONMENT_TYPE'] in ('dev', 'local'))
 if not DEBUG:
-    ALLOWED_HOSTS = [os.environ['HOST_NAME']]
+    ALLOWED_HOSTS = [_host.strip() for _host in os.environ['ALLOWED_HOSTS'].split(',')]
 
 
 # Application definition

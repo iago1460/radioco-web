@@ -8,7 +8,7 @@ Installation should be pretty straightforward
 
 ### Prerequisites and Installation
 
-Have docker install, then run:
+Have docker installed, change your .env variables, then run:
 
 ```
 ./run start

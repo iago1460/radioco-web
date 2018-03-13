@@ -11,8 +11,9 @@ services:
         requirements: requirements.txt
     environment:
       - ENVIRONMENT_TYPE=live
+      - DJANGO_LOG_LEVEL=ERROR
       - SECRET_KEY
-      - HOST_NAME
+      - ALLOWED_HOSTS
     expose:
       - 8000
     ports:

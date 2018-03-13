@@ -6,6 +6,7 @@ services:
   django:
     environment:
       - ENVIRONMENT_TYPE=dev
+      - DJANGO_LOG_LEVEL=INFO
     stdin_open: true
     tty: true
     command: python3 manage.py runserver --noreload 0.0.0.0:8000
