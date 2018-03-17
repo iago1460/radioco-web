@@ -46,8 +46,8 @@ function manage(){
 
 function translate(){
     manage render_translation_vars
-    docker-compose run --rm django python3 manage.py makemessages -l en
-    docker-compose run --rm django python3 manage.py makemessages --all
+    docker-compose run --rm django python3 manage.py makemessages -l en --no-wrap
+    docker-compose run --rm django python3 manage.py makemessages --all --no-wrap
     docker-compose run --rm django python3 manage.py compilemessages
 }
 

@@ -1,15 +1,17 @@
 msgid ""
 msgstr ""
+"Project-Id-Version: RadioCo Official Web\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-03-17 13:58+0100\n"
+"Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: POEditor.com\n"
-"Project-Id-Version: RadioCo Official Web\n"
-"Language: es\n"
 
 #: radioco/main/templates/main/about.html:7
-#: radioco/main/templates/main/snippets/menu.html:19
-#: radioco/main/templates/main/snippets/menu.html:58
+#: radioco/main/templates/main/snippets/menu.html:21
+#: radioco/main/templates/main/snippets/menu.html:62
 msgid "About"
 msgstr "Sobre Nosotros"
 
@@ -24,6 +26,22 @@ msgstr "La historia de RadioCo empezó como un proyecto fin de carrera de Iago V
 #: radioco/main/templates/main/about.html:33
 msgid "This is an Open Source project, which means everybody can contribute on it. Everything you see here, from the documentation to the code itself, was created by and for the community."
 msgstr ""
+
+#: radioco/main/templates/main/about.html:40
+msgid "Help us translate RadioCo into your language!"
+msgstr ""
+
+#: radioco/main/templates/main/about.html:43
+#, fuzzy
+#| msgid "Website"
+msgid "Official Website"
+msgstr "Página web"
+
+#: radioco/main/templates/main/about.html:47
+#, fuzzy
+#| msgid "RadioCo Author"
+msgid "RadioCo project"
+msgstr "Autor de RadioCo"
 
 #: radioco/main/templates/main/index.html:17
 msgid "RadioCo is a user-friendly system with an intuitive drag-and-drop interface."
@@ -201,29 +219,24 @@ msgid "Follow this steps to get started"
 msgstr "Sigue estos pasos para comenzar"
 
 #: radioco/main/templates/main/snippets/menu.html:15
+#: radioco/main/templates/main/snippets/menu.html:56
 msgid "Home"
 msgstr "Inicio"
 
-#: radioco/main/templates/main/snippets/menu.html:17
-#: radioco/main/templates/main/snippets/menu.html:55
+#: radioco/main/templates/main/snippets/menu.html:18
+#: radioco/main/templates/main/snippets/menu.html:59
 msgid "Download"
 msgstr "Descarga"
 
-#: radioco/main/templates/main/snippets/menu.html:26 radioco/settings.py:115
+#: radioco/main/templates/main/snippets/menu.html:29
+#: radioco/main/templates/main/snippets/menu.html:69 radioco/settings.py:134
 msgid "English"
 msgstr "Inglés"
 
-#: radioco/main/templates/main/snippets/menu.html:37
+#: radioco/main/templates/main/snippets/menu.html:40
+#: radioco/main/templates/main/snippets/menu.html:79
 msgid "Español"
 msgstr "Español"
-
-#: radioco/main/templates/main/snippets/menu.html:53
-msgid "Blog"
-msgstr "Blog"
-
-#: radioco/main/templates/main/snippets/menu.html:60
-msgid "Contact Us"
-msgstr "Contáctanos"
 
 #: radioco/main/templates/main/snippets/stations.html:9
 msgid "Stations"
@@ -481,7 +494,12 @@ msgstr "Idioma Alemán"
 msgid "English Language"
 msgstr "Idioma Inglés"
 
-#: radioco/settings.py:114
+#: radioco/settings.py:133
 msgid "Spanish"
 msgstr "Español"
 
+#~ msgid "Blog"
+#~ msgstr "Blog"
+
+#~ msgid "Contact Us"
+#~ msgstr "Contáctanos"
