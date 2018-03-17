@@ -1,26 +1,17 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: RadioCo Official Web\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-12 14:45+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"POT-Creation-Date: 2018-03-17 13:58+0100\n"
+"Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: POEditor.com\n"
 
 #: radioco/main/templates/main/about.html:7
-#: radioco/main/templates/main/snippets/menu.html:19
-#: radioco/main/templates/main/snippets/menu.html:58
+#: radioco/main/templates/main/snippets/menu.html:21
+#: radioco/main/templates/main/snippets/menu.html:62
 msgid "About"
 msgstr "Sobre Nosotros"
 
@@ -29,26 +20,32 @@ msgid "History"
 msgstr "Historia"
 
 #: radioco/main/templates/main/about.html:25
-msgid ""
-"RadioCo started in 2014 as a Iago Veloso's dissertation project, originally "
-"named \"Live broadcast automatic recording for a Community radio station "
-"with Free Software\" was created to provide a automated recording system to "
-"Cuac FM. Since then successfully produces high quality podcasts every day."
-msgstr ""
+msgid "RadioCo started in 2014 as a Iago Veloso's dissertation project, originally named \"Live broadcast automatic recording for a Community radio station with Free Software\" was created to provide a automated recording system to Cuac FM. Since then successfully produces high quality podcasts every day."
+msgstr "La historia de RadioCo empezó como un proyecto fin de carrera de Iago Veloso, originalmente titulado \"Sistema de grabación automática de la emisión en directo de una emisora de radio comunitaria con Software Libre\" fue creado para proporcionar un sistema automatizado de grabación para Cuac FM. Desde entonces, produce podcast de alta calidad"
 
 #: radioco/main/templates/main/about.html:33
-msgid ""
-"This is an Open Source project, which means everybody can contribute on it. "
-"Everything you see here, from the documentation to the code itself, was "
-"created by and for the community."
+msgid "This is an Open Source project, which means everybody can contribute on it. Everything you see here, from the documentation to the code itself, was created by and for the community."
 msgstr ""
 
-#: radioco/main/templates/main/index.html:17
-msgid ""
-"RadioCo is a user-friendly system with an intuitive drag-and-drop interface."
+#: radioco/main/templates/main/about.html:40
+msgid "Help us translate RadioCo into your language!"
 msgstr ""
-"RadioCo es un sistema de fácil uso que cuenta con una interfaz intuitiva "
-"mediante arrastrar y soltar"
+
+#: radioco/main/templates/main/about.html:43
+#, fuzzy
+#| msgid "Website"
+msgid "Official Website"
+msgstr "Página web"
+
+#: radioco/main/templates/main/about.html:47
+#, fuzzy
+#| msgid "RadioCo Author"
+msgid "RadioCo project"
+msgstr "Autor de RadioCo"
+
+#: radioco/main/templates/main/index.html:17
+msgid "RadioCo is a user-friendly system with an intuitive drag-and-drop interface."
+msgstr "RadioCo es un sistema de fácil uso que cuenta con una interfaz intuitiva mediante arrastrar y soltar"
 
 #: radioco/main/templates/main/index.html:18
 msgid "Here are the main features:"
@@ -59,36 +56,24 @@ msgid "Website"
 msgstr "Página web"
 
 #: radioco/main/templates/main/index.html:31
-msgid ""
-"Make available your shows to the world. Providing a website will make your "
-"station more attractive to listeners"
-msgstr ""
-"Haz que tus programas esten disponibles para todo el mundo. Teniendo una web "
-"hará que tu emisora atraiga mas oyentes"
+msgid "Make available your shows to the world. Providing a website will make your station more attractive to listeners"
+msgstr "Haz que tus programas esten disponibles para todo el mundo. Teniendo una web hará que tu emisora atraiga mas oyentes"
 
 #: radioco/main/templates/main/index.html:36
 msgid "Scheduler"
 msgstr "Programador"
 
 #: radioco/main/templates/main/index.html:37
-msgid ""
-"Create your schedule dragging and dropping shows onto the calendar. The "
-"system takes care of recording them automatically."
-msgstr ""
-"Crea tu parrilla arrastrando y soltando los programas en el calendario. El "
-"sistema se ocupa automáticamente de grabarlos."
+msgid "Create your schedule dragging and dropping shows onto the calendar. The system takes care of recording them automatically."
+msgstr "Crea tu parrilla arrastrando y soltando los programas en el calendario. El sistema se ocupa automáticamente de grabarlos."
 
 #: radioco/main/templates/main/index.html:42
 msgid "Permissions"
 msgstr "Permisos"
 
 #: radioco/main/templates/main/index.html:43
-msgid ""
-"Managing users can be tricky, RadioCo has a permission system to make things "
-"easier. Give your staff the right access."
-msgstr ""
-"Administrar usuarios puede ser complicado, RadioCo cuenta con un sistema de "
-"permisos para hacerlo más fácil. Dale a tus usuarios el acceso necesario."
+msgid "Managing users can be tricky, RadioCo has a permission system to make things easier. Give your staff the right access."
+msgstr "Administrar usuarios puede ser complicado, RadioCo cuenta con un sistema de permisos para hacerlo más fácil. Dale a tus usuarios el acceso necesario."
 
 #: radioco/main/templates/main/index.html:61
 msgid "Collaborators"
@@ -145,12 +130,8 @@ msgid "Recorder software"
 msgstr "Programa grabador"
 
 #: radioco/main/templates/main/installation.html:76
-msgid ""
-"The recorder app runs over Linux and communicates automatically with the web "
-"app"
-msgstr ""
-"La aplicación grabadora funciona sobre Linux y se comunica automáticamente "
-"con la web"
+msgid "The recorder app runs over Linux and communicates automatically with the web app"
+msgstr "La aplicación grabadora funciona sobre Linux y se comunica automáticamente con la web"
 
 #: radioco/main/templates/main/installation.html:94
 msgid "Third party Android application."
@@ -182,10 +163,8 @@ msgid "DONATE"
 msgstr "DONA"
 
 #: radioco/main/templates/main/snippets/footer.html:30
-msgid ""
-"Donate to support our effort in developing free and open source software."
-msgstr ""
-"Dona para contribuir a nuestro esfuerzo por desarrollar software libre."
+msgid "Donate to support our effort in developing free and open source software."
+msgstr "Dona para contribuir a nuestro esfuerzo por desarrollar software libre."
 
 #: radioco/main/templates/main/snippets/footer.html:41
 msgid "LICENSE"
@@ -224,13 +203,8 @@ msgid "Free software"
 msgstr "Software Libre"
 
 #: radioco/main/templates/main/snippets/header.html:17
-msgid ""
-"RadioCo is a radio management application suitable for community radios that "
-"makes easy scheduling, live recording and publishing."
-msgstr ""
-"Radioco es un sistema de administración de radios apropiado para radios "
-"comunitarias que hace que programar, grabar y publicar en directo sea una "
-"tarea fácil"
+msgid "RadioCo is a radio management application suitable for community radios that makes easy scheduling, live recording and publishing."
+msgstr "Radioco es un sistema de administración de radios apropiado para radios comunitarias que hace que programar, grabar y publicar en directo sea una tarea fácil"
 
 #: radioco/main/templates/main/snippets/header.html:19
 msgid "Setup"
@@ -245,29 +219,24 @@ msgid "Follow this steps to get started"
 msgstr "Sigue estos pasos para comenzar"
 
 #: radioco/main/templates/main/snippets/menu.html:15
+#: radioco/main/templates/main/snippets/menu.html:56
 msgid "Home"
 msgstr "Inicio"
 
-#: radioco/main/templates/main/snippets/menu.html:17
-#: radioco/main/templates/main/snippets/menu.html:55
+#: radioco/main/templates/main/snippets/menu.html:18
+#: radioco/main/templates/main/snippets/menu.html:59
 msgid "Download"
 msgstr "Descarga"
 
-#: radioco/main/templates/main/snippets/menu.html:26 radioco/settings.py:115
+#: radioco/main/templates/main/snippets/menu.html:29
+#: radioco/main/templates/main/snippets/menu.html:69 radioco/settings.py:134
 msgid "English"
 msgstr "Inglés"
 
-#: radioco/main/templates/main/snippets/menu.html:37
+#: radioco/main/templates/main/snippets/menu.html:40
+#: radioco/main/templates/main/snippets/menu.html:79
 msgid "Español"
 msgstr "Español"
-
-#: radioco/main/templates/main/snippets/menu.html:53
-msgid "Blog"
-msgstr "Blog"
-
-#: radioco/main/templates/main/snippets/menu.html:60
-msgid "Contact Us"
-msgstr "Contáctanos"
 
 #: radioco/main/templates/main/snippets/stations.html:9
 msgid "Stations"
@@ -286,21 +255,15 @@ msgid "Discover the people who made this possible"
 msgstr "Descubre a la gente que ha hecho esto posible"
 
 #: radioco/main/templates/main/snippets/team.html:42
-msgid ""
-"Is your name missing or your are not happy with something? Contact us in the "
-"form below."
-msgstr ""
-"Quieres que tu nombre aparezca aquí o tienes alguna sugerencia? Contáctanos "
-"en el siguiente formulario"
+msgid "Is your name missing or your are not happy with something? Contact us in the form below."
+msgstr "Quieres que tu nombre aparezca aquí o tienes alguna sugerencia? Contáctanos en el siguiente formulario"
 
 #: radioco/main/templates/main/snippets/timeline.html:9
 msgid "Events & Talks"
 msgstr "Eventos y Charlas"
 
 #: radioco/main/templates/main/snippets/timeline.html:11
-msgid ""
-"We're all about making it as simple as possible to discover how to use "
-"RadioCo."
+msgid "We're all about making it as simple as possible to discover how to use RadioCo."
 msgstr "Descubre que puede hacer RadioCo por ti"
 
 #: radioco/main/templates/tmp_transalation/about/steps.html:2
@@ -311,9 +274,7 @@ msgstr "1. Instala docker"
 #: radioco/main/templates/tmp_transalation/about/steps.html:3
 #: radioco/main/templates/tmp_transalation/installation/steps.html:3
 msgid "Docker is a platform to run applications with containers"
-msgstr ""
-"Docker es una plataforma que automatiza el despliegue de aplicaciones dentro "
-"de contenedores de software"
+msgstr "Docker es una plataforma que automatiza el despliegue de aplicaciones dentro de contenedores de software"
 
 #: radioco/main/templates/tmp_transalation/about/steps.html:4
 #: radioco/main/templates/tmp_transalation/installation/steps.html:4
@@ -359,7 +320,6 @@ msgstr "Programador Radio Corax"
 
 #: radioco/main/templates/tmp_transalation/about/team.html:5
 #, fuzzy
-#| msgid "Contributors"
 msgid "Main Contributor"
 msgstr "Principal colaborador"
 
@@ -373,7 +333,6 @@ msgstr "Programador"
 
 #: radioco/main/templates/tmp_transalation/about/team.html:7
 #, fuzzy
-#| msgid "Contributors"
 msgid "Contributor"
 msgstr "Participantes"
 
@@ -535,6 +494,12 @@ msgstr "Idioma Alemán"
 msgid "English Language"
 msgstr "Idioma Inglés"
 
-#: radioco/settings.py:114
+#: radioco/settings.py:133
 msgid "Spanish"
 msgstr "Español"
+
+#~ msgid "Blog"
+#~ msgstr "Blog"
+
+#~ msgid "Contact Us"
+#~ msgstr "Contáctanos"
