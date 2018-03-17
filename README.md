@@ -4,14 +4,14 @@ Port of a existing wordpress project, so don't expect clean code
 
 ## Getting Started
 
-Installation should be pretty straightforward
+Installation should be pretty straightforward:
 
 ### Prerequisites and Installation
 
 Have docker installed, change your .env variables, then run:
 
 ```
-./run start
+./run start_dev
 ```
 
 To get help just run without arguments:
@@ -35,7 +35,10 @@ To get help just run without arguments:
 
 ## Contributing
 
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
+Any help is welcome.
+
+Help us to [translate](https://poeditor.com/join/project/wc3P8dCind)!
+No need to install or setup anything, just follow [this link](https://poeditor.com/join/project/wc3P8dCind).
 
 ## Authors
 
@@ -43,4 +46,4 @@ Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c6
 
 ## License
 
-This project is licensed under the GNU GPL v3 License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the GNU GPL v3 License - see the [LICENSE](LICENSE) file for details
