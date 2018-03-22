@@ -43,7 +43,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
-    'django.middleware.cache.UpdateCacheMiddleware', # First
+    'django.middleware.cache.UpdateCacheMiddleware',  # First
     'django.middleware.security.SecurityMiddleware',
     # 'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -52,8 +52,10 @@ MIDDLEWARE = [
     # 'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.locale.LocaleMiddleware',
-    'django.middleware.cache.FetchFromCacheMiddleware', # Last
+    'django.middleware.cache.FetchFromCacheMiddleware',  # Last
 ]
+
+CACHE_MIDDLEWARE_SECONDS = 60 * 60 * 24  # 1 day
 
 ROOT_URLCONF = 'radioco.urls'
 
