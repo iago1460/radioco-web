@@ -1,0 +1,40 @@
+{% load i18n staticfiles utils %}
+
+{% get_available_languages as languages %}
+{% get_current_language as LANGUAGE_CODE %}
+
+
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>{{ meta_title }}</title>
+
+<link rel="icon" type="image/png" href="{% static 'main/favicon.ico' %}">
+
+<meta name="title" content="{{ meta_title }}"/>
+<meta name="description" content="{{ meta_description }}"/>
+{% if not meta_disable_localisation %}
+    {% for lang_code, lang_name in languages %}
+        {% if lang_code == LANGUAGE_CODE %}
+            <link rel="alternate" href="{% translate_url lang_code %}" hreflang="x-default"/>
+        {% else %}
+            <link rel="alternate" href="{% translate_url lang_code %}" hreflang="{{ lang_code }}"/>
+        {% endif %}
+    {% endfor %}
+{% endif %}
+<meta property="og:type" content="{{ meta_type|default:'website' }}"/>
+<meta property="og:title" content="{{ meta_title }}"/>
+<meta property="og:description" content="{{ meta_description }}"/>
+<meta property="og:url" content="{{ request.build_absolute_uri }}"/>
+<meta property="og:site_name" content="RadioCo"/>
+{% if not meta_disable_localisation %}
+    {% for lang_code, lang_name in languages %}
+        <meta property="og:locale{% if lang_code != LANGUAGE_CODE %}:alternate{% endif %}" content="{{ lang_code }}"/>
+    {% endfor %}
+{% endif %}
+
+<meta name="theme-color" content="#DD281B"/>
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="{{ meta_title }}"/>
+<meta name="twitter:site" content="@RadioCo_org"/>
+<meta name="twitter:creator" content="@RadioCo_org"/>

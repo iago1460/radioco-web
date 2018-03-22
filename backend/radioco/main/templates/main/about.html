@@ -1,6 +1,16 @@
 {% extends 'main/base.html' %}
 {% load i18n staticfiles %}
 
+
+{% block meta %}
+
+{% trans "History" as meta_title %}
+{% trans "RadioCo started in 2014 as a Iago Veloso's dissertation project" as meta_description %}
+{% include 'main/snippets/meta_tags.html' %}
+
+{% endblock %}
+
+
 {% block content %}
 
 {% get_current_language as LANGUAGE_CODE %}

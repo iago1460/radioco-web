@@ -3,22 +3,31 @@
   title: Instalación y documentación adicional
   language: es
   article_template: main/articles/instalacion.html
+  meta_description: Esta guia describe el proceso de instalación en las distribuciones Debian y Ubuntu
 - url: radioco-en-encuentro14
   title: RADIOCO EN ENCUENTRO14
   language: es
   article_template: main/articles/encuentro14.html
+  meta_title: Encuentro14
+  meta_description: Hoy se ha presentado RadioCo en Encuentro14
 - url: radioco-consigue-un-accesit-en-la-vii-edicion-del-premio-al-mejor-pfc-con-licencia-libre
   title: RADIOCO CONSIGUE UN ACCÉSIT EN LA VII EDICIÓN DEL PREMIO AL MEJOR PFC CON LICENCIA LIBRE
   slug: mejor_pfc_vii_edicion
   language: es
   article_template: main/articles/mejor_pfc_vii_edicion.html
+  meta_title: VII edición del Premio al mejor PFC
+  meta_description: RadioCo consigue un accésit en la VII edición del Premio al mejor PFC con licencia libre
 - url: premio-en-el-primer-certamen-de-aplicaciones-libre-chuza
   title: PREMIO EN EL PRIMER CERTAMEN DE APLICACIONES LIBRE CHUZA
   slug: premio_chuza
   language: es
   article_template: main/articles/premio_chuza.html
+  meta_title: Primer certamen de Aplicaciones libres Chuza
+  meta_description: En esta primera edición del concurso el jurado premió a Iago Veloso Abalo por RadioCo
 - url: radioco-recibe-el-premio-del-publico-y-un-segundo-premio-en-el-14o-concurso-de-proyectos-tecnologicos
   title: RADIOCO RECIBE EL PREMIO DEL PÚBLICO Y UN SEGUNDO PREMIO EN EL 14º CONCURSO DE PROYECTOS TECNOLÓGICOS
   slug: premio_concurso_proyectos_tecnologicos
   language: es
   article_template: main/articles/premio_concurso_proyectos_tecnologicos.html
+  meta_title: 14º Concurso de Proyectos Tecnológicos
+  meta_description: RadioCo recibe el premio del público y un segundo premio en el 14º Concurso de Proyectos Tecnológicos

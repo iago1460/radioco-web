@@ -2,7 +2,7 @@ import os
 
 from django.conf import settings
 from django.urls import reverse
-from django.utils.translation import activate, deactivate
+from django.utils import translation
 from django.views.generic import TemplateView, RedirectView
 
 from radioco.main.views import load_yaml_item
@@ -32,6 +32,11 @@ class ArticleView(TemplateView):
     def get_context_data(self, **kwargs):
         context = super(ArticleView, self).get_context_data(**kwargs)
         context.update(self.article_data)
+        context.update({
+            'meta_title': context.get('meta_title', context['title']),
+            'meta_disable_localisation': True,
+            'meta_type': 'article'
+        })
         return context
 
 
@@ -46,10 +51,10 @@ class TranslateRedirectView(RedirectView):
         method.
         """
         if self.language:
-            activate(self.language)
+            translation.activate(self.language)
         url = reverse(self.pattern_name, args=args, kwargs=kwargs)
         if self.language:
-            deactivate()
+            translation.deactivate()
 
         args = self.request.META.get('QUERY_STRING', '')
         if args and self.query_string:

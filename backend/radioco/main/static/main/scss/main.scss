@@ -129,6 +129,7 @@ input {
 	background-position: center;
 	width: 100%;
 	@include background-size(cover);
+	background-color: #22272b;
 
 	.top-header {
 		width: 100%;

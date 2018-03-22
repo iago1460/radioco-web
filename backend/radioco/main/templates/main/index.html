@@ -1,6 +1,16 @@
 {% extends 'main/base.html' %}
 {% load i18n staticfiles %}
 
+
+{% block meta %}
+
+{% trans "Get to know Radioco" as meta_title %}
+{% trans "RadioCo is a user-friendly system with an intuitive drag-and-drop interface." as meta_description %}
+{% include 'main/snippets/meta_tags.html' %}
+
+{% endblock %}
+
+
 {% block content %}
 
 {% include 'main/snippets/header.html' %}
