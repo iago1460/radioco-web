@@ -7,17 +7,17 @@
 <html lang="{{ LANGUAGE_CODE }}" prefix="og: http://ogp.me/ns#">
 <head>
     <!-- / Preload resources. -->
-    <!--<link rel='preconnect' href='//fonts.googleapis.com' crossorigin="anonymous">-->
-    <!--<link rel='preconnect' href='//fonts.gstatic.com' crossorigin="anonymous">-->
-    <!--<link rel='dns-prefetch' href='//fonts.googleapis.com' crossorigin="anonymous">-->
+    <link rel='preconnect' href='//fonts.googleapis.com' crossorigin="anonymous">
+    <link rel='preconnect' href='//fonts.gstatic.com' crossorigin="anonymous">
+    <link rel='dns-prefetch' href='//fonts.googleapis.com' crossorigin="anonymous">
     <link rel="preload" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,900,700,300,300italic" as="style" type='text/css' crossorigin="anonymous">
+    <link rel="preload" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" as="style" crossorigin="anonymous">
+    <link rel="preload" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" as="style" crossorigin="anonymous">
+    <link rel="preload" href="{% static 'main/css/main.css' %}" as="style">
     <link rel="preload" href="https://fonts.gstatic.com/s/sourcesanspro/v11/6xKydSBYKcSV-LCoeQqfX1RYOo3ig4vwlxdu3cOWxw.woff2" as="font" crossorigin>
     <link rel="preload" href="https://fonts.gstatic.com/s/sourcesanspro/v11/6xKydSBYKcSV-LCoeQqfX1RYOo3iu4nwlxdu3cOWxw.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="https://fonts.gstatic.com/s/sourcesanspro/v11/6xK3dSBYKcSV-LCoeQqfX1RYOo3qOK7lujVj9w.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="https://fonts.gstatic.com/s/sourcesanspro/v11/6xKwdSBYKcSV-LCoeQqfX1RYOo3qPZZMkids18S0xR41.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" as="style" crossorigin="anonymous">
-    <link rel="preload" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" as="style" crossorigin="anonymous">
-    <link rel="preload" href="{% static 'main/css/main.css' %}" as="style">
     <link rel="preload" href="{% static 'main/images/cascos_radioco.jpg' %}" as="image">
 
     {% block meta %}
