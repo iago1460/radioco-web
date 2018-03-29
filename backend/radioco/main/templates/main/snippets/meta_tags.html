@@ -9,6 +9,7 @@
 <title>{{ meta_title }}</title>
 
 <link rel="icon" type="image/png" href="{% static 'main/favicon.ico' %}">
+<link rel="canonical" href="{{ request.build_absolute_uri }}">
 
 <meta name="title" content="{{ meta_title }}"/>
 <meta name="description" content="{{ meta_description }}"/>
