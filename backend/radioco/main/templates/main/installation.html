@@ -18,13 +18,21 @@
 {% trans 'Follow this easy steps to get started.' as subheader %}
 {% include 'main/snippets/simple_header.html' %}
 
+
 {% if LANGUAGE_CODE == 'es' %}
-<section id="counter" class="front-page-section warning-section">
+<section class="front-page-section warning-section">
+    Si quieres una instalación mucho más sencilla <a href="https://mailchi.mp/f1b0f331debf/radioco-cloud" title="Instalación fácil" class="post-button"> sigue este enlace</a>
+</section>
+{% endif %}
+
+
+{% include 'main/snippets/installation_steps.html' %}
+
+{% if LANGUAGE_CODE == 'es' %}
+<section class="front-page-section warning-section">
     Disponemos de <a href="{% url 'documentacion_adicional' %}" title="Documentación" class="post-button"> documentación adicional en español </a>
 </section><!--/#counter.front-page-section-->
 {% endif %}
-
-{% include 'main/snippets/installation_steps.html' %}
 
 
 <section class="front-page-section counter counter-alt"
