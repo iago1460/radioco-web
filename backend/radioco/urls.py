@@ -20,6 +20,7 @@ from django.contrib.sitemaps.views import sitemap
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.urls import URLResolver
 from django.urls import path, reverse
+from django.views.generic import TemplateView
 
 from radioco.pages.urls import urlpatterns as page_urls
 
@@ -57,12 +58,15 @@ class StaticViewSitemap(sitemaps.Sitemap):
         return reverse(item)
 
 
-urlpatterns.append(
-    path(
-        'sitemap.xml',
-        sitemap,
-        {'sitemaps': {'static': StaticViewSitemap}},
-        name='django.contrib.sitemaps.views.sitemap'
+urlpatterns.extend(
+    (
+        path(
+            'sitemap.xml',
+            sitemap,
+            {'sitemaps': {'static': StaticViewSitemap}},
+            name='django.contrib.sitemaps.views.sitemap'
+        ),
+        path('robots.txt', TemplateView.as_view(template_name="main/robots.txt", content_type="text/plain"))
     )
 )
 
