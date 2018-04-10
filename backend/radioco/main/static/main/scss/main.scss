@@ -2352,8 +2352,8 @@ input {
     &:nth-child(even),  &:nth-child(odd){
 	  @media (min-width: 992px) {
 		position: relative;
+		width: calc(100% - 100px);
 	  }
-      width: calc(100% - 100px);
       //margin-bottom: 50px;
       height: 170px;
       right: -100px;
