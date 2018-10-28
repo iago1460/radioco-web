@@ -8,12 +8,11 @@ RUN apt-get update && apt-get install -yq --fix-missing \
 
 RUN pip3 install --upgrade pip setuptools virtualenv
 
-COPY extra_files/requirements.txt /
+COPY requirements.txt /
 RUN pip3 install -r requirements.txt
 
-COPY extra_files/* /
-RUN chmod +x /*.sh
+COPY ./ /radioco/
 
-WORKDIR /backend/
+WORKDIR /radioco/backend/
 
-CMD ["/start.sh"]
+CMD ["../docker/django/scripts/start.sh"]

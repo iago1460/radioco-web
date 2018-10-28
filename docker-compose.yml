@@ -6,21 +6,15 @@ services:
   django:
     restart: always
     build:
-      context: docker/django
-      args:
-        requirements: requirements.txt
+      context: .
+      dockerfile: docker/django/Dockerfile
     environment:
-      - ENVIRONMENT_TYPE=live
+      - DEBUG=False
       - DJANGO_LOG_LEVEL=ERROR
       - SECRET_KEY
       - ALLOWED_HOSTS
-    expose:
-      - 8000
     ports:
       - "${PORT_BACKEND}:8000"
-    volumes:
-      - ./backend:/backend
-    command: uwsgi --http 0.0.0.0:8000 --ini /uwsgi.ini
 
   sass:
     build:
@@ -28,4 +22,3 @@ services:
     volumes:
        - ./backend/radioco/main/static/main/:/workdir
     working_dir: /workdir
-    command: echo nothing to run

@@ -27,11 +27,11 @@ items:
         title: RadioCo Recorder
         icon: fas fa-microphone
         url: http://django-radio.readthedocs.io/en/latest/installation/install_recorder_program.html
-  - title: 4. Radiocom
+  - title: 4. Radiocom Integration
     image: radiocom.jpg
-    description: Reach more users using an Android application
+    description: Reach more users using a native app
     resources:
       - type: link
         title: Radiocom
-        icon: fab fa-android
-        url: http://django-radio.readthedocs.io/en/latest/api/index.html#radiocom-api
+        icon: fas fa-mobile-alt
+        url: https://django-radio.readthedocs.io/en/latest/api/index.html#radiocom-api

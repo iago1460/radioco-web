@@ -1,0 +1,8 @@
+version: '3.0'
+services:
+
+# Application Containers ------------------------------------------------------
+
+  django:
+    environment:
+      - DEBUG=False

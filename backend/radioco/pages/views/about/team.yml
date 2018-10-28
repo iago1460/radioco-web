@@ -15,7 +15,7 @@ items:
   - name: Stefan Walluhn
     image: stefan_walluhn.jpeg
     role: Radio Corax Developer
-    description: Main Contributor
+    description: Contributor
     resources:
       - type: icon_link
         title: Web

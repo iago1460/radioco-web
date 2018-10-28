@@ -12,6 +12,11 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 
 import os
 
+
+def str_to_bool(text):
+    return str(text).lower() not in ('none', 'false', 'no', '0')
+
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SITE_DIR = BASE_DIR
@@ -24,7 +29,7 @@ SITE_DIR = BASE_DIR
 SECRET_KEY = os.environ['SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = bool(os.environ['ENVIRONMENT_TYPE'] in ('dev', 'local'))
+DEBUG = str_to_bool(os.environ.get('DEBUG'))
 if not DEBUG:
     ALLOWED_HOSTS = [_host.strip() for _host in os.environ['ALLOWED_HOSTS'].split(',')]
 
@@ -43,7 +48,6 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
-    'django.middleware.cache.UpdateCacheMiddleware',  # First
     'django.middleware.security.SecurityMiddleware',
     # 'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -52,10 +56,7 @@ MIDDLEWARE = [
     # 'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.locale.LocaleMiddleware',
-    'django.middleware.cache.FetchFromCacheMiddleware',  # Last
 ]
-
-CACHE_MIDDLEWARE_SECONDS = 60 * 60 * 24  # 1 day
 
 ROOT_URLCONF = 'radioco.urls'
 
@@ -63,7 +64,6 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [],
-        'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
@@ -71,6 +71,10 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
             ],
+            'loaders': (
+                'django.template.loaders.filesystem.Loader',
+                'django.template.loaders.app_directories.Loader',
+            ),
         },
     },
 ]
@@ -82,14 +86,6 @@ WSGI_APPLICATION = 'radioco.wsgi.application'
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
 DATABASES = {
-}
-
-
-CACHES = {
-    'default': {
-        'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',
-        'LOCATION': 'unique-snowflake',
-    }
 }
 
 
@@ -144,7 +140,7 @@ LOCALE_PATHS = (
     os.path.join(SITE_DIR, 'locale'),
 )
 
-LOCALE_PRERENDER_PATH = os.path.join(BASE_DIR, 'radioco/main/templates/tmp_transalation/')
+LOCALE_PRERENDER_PATH = os.path.join(BASE_DIR, 'radioco/main/templates/tmp_translations/')
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
@@ -169,3 +165,20 @@ try:
     from .local_settings import *
 except ImportError:
     pass
+
+
+if not DEBUG:
+    # Enabling cache
+    MIDDLEWARE = [
+        'django.middleware.cache.UpdateCacheMiddleware', # First
+        *MIDDLEWARE,
+        'django.middleware.cache.FetchFromCacheMiddleware' # Last
+    ]
+    CACHE_MIDDLEWARE_SECONDS = 60 * 60 * 24  # 1 day
+    TEMPLATES[0]['OPTIONS']['loaders'] = [('django.template.loaders.cached.Loader', TEMPLATES[0]['OPTIONS']['loaders'])]
+    CACHES = {
+        'default': {
+            'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',
+            'LOCATION': 'unique-snowflake',
+        }
+    }

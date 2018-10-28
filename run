@@ -21,18 +21,27 @@ If an unknown command is specified, it will be passed to docker-compose. e.g:
 EOF
 }
 
-function start(){
-     docker-compose down
-     docker-compose build
-     docker-compose run --rm sass node-sass scss/ -o css/
-     docker-compose run --rm django python3 manage.py collectstatic --no-input
-     docker-compose up -d
-}
+STAGING_COMPOSE_FILES="-f docker-compose.yml -f docker-compose.staging.yml"
+COMPOSE_FILES=""
 
 function start_dev(){
-     docker-compose -f docker-compose.yml -f docker-compose.dev.yml down
-     docker-compose -f docker-compose.yml -f docker-compose.dev.yml build
-     docker-compose -f docker-compose.yml -f docker-compose.dev.yml up -d
+     if [ ! -f ".env" ]; then
+         cp -v .sample.env .env
+         echo "Creating .env file. Update your environment variables and try again."
+         exit 0
+     fi
+     export_file_vars .env
+     docker-compose $COMPOSE_FILES down --remove-orphans
+     docker-compose $COMPOSE_FILES build
+     docker-compose $COMPOSE_FILES up -d
+     echo "RadioCo is running at http://127.0.0.1:${PORT_BACKEND}"
+}
+
+
+function start(){
+     docker-compose run --rm sass node-sass scss/ -o css/
+     COMPOSE_FILES=$STAGING_COMPOSE_FILES
+     start_dev
 }
 
 function shell(){
@@ -50,6 +59,24 @@ function translate(){
     docker-compose run --rm django python3 manage.py makemessages --all --no-wrap
     docker-compose run --rm django python3 manage.py compilemessages
 }
+
+
+function export_file_vars() {
+    # Exports values from .env files, but without clobbering existing variables
+    filename=$1
+    while read -r line; do
+         if [[ $line =~ ^([^=#]+)=(.*)$ ]]; then
+            key=${BASH_REMATCH[1]}
+            value=${BASH_REMATCH[2]}
+            existing_value=${!key}
+            if [ -z $existing_value ]; then
+                export $key="$value"
+            fi
+         fi
+    done < $filename
+}
+
+export_file_vars .env
 
 
 if [ $# -eq 0 ]; then

@@ -5,8 +5,10 @@ services:
 
   django:
     environment:
-      - ENVIRONMENT_TYPE=dev
+      - DEBUG=True
       - DJANGO_LOG_LEVEL=INFO
+    volumes:
+    - ./:/radioco/
     stdin_open: true
     tty: true
     command: python3 manage.py runserver --noreload 0.0.0.0:8000
