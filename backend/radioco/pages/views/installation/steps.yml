@@ -27,11 +27,15 @@ items:
         title: RadioCo Recorder
         icon: fas fa-microphone
         url: http://django-radio.readthedocs.io/en/latest/installation/install_recorder_program.html
-  - title: 4. Radiocom Integration
+  - title: 4. Optional Integrations
     image: radiocom.jpg
-    description: Reach more users using a native app
+    description: Add extra functionality with Alexa or a native mobile app
     resources:
       - type: link
         title: Radiocom
         icon: fas fa-mobile-alt
         url: https://django-radio.readthedocs.io/en/latest/api/index.html#radiocom-api
+      - type: link
+        title: Alexa
+        icon: fas fa-volume-up
+        url: https://github.com/iago1460/radioco-alexa
