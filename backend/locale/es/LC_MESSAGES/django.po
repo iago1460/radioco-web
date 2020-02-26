@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RadioCo Official Web\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-02-24 09:38+0100\n"
+"POT-Creation-Date: 2020-02-26 09:40+0100\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -150,7 +150,7 @@ msgstr "La aplicación grabadora funciona sobre Linux y se comunica automáticam
 
 #: radioco/main/templates/main/installation.html:112
 msgid "Mobile apps for Community Media Stations."
-msgstr ""
+msgstr "Aplicación móvil para emisoras comunitarias."
 
 #: radioco/main/templates/main/installation.html:130
 msgid "Make your podcasts available in Alexa."
