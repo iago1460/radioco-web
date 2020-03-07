@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RadioCo Official Web\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-02-26 09:40+0100\n"
+"POT-Creation-Date: 2020-03-07 18:22+0100\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -377,13 +377,19 @@ msgid "Radio Corax"
 msgstr "Radio Corax"
 
 #: radioco/main/templates/tmp_translations/index/stations.html:3
-#: radioco/main/templates/tmp_translations/index/stations.html:5
 msgid "Germany, Halle"
 msgstr "Alemania, Halle"
 
 #: radioco/main/templates/tmp_translations/index/stations.html:4
 msgid "Cuac FM"
 msgstr ""
+
+#: radioco/main/templates/tmp_translations/index/stations.html:5
+#: radioco/main/templates/tmp_translations/index/timeline.html:7
+#: radioco/main/templates/tmp_translations/index/timeline.html:28
+#: radioco/main/templates/tmp_translations/index/timeline.html:31
+msgid "Spain, A Coruña"
+msgstr "España, A Coruña"
 
 #: radioco/main/templates/tmp_translations/index/timeline.html:2
 msgid "Annual conference of Federal Association of Free Radios"
@@ -405,12 +411,6 @@ msgstr ""
 #: radioco/main/templates/tmp_translations/index/timeline.html:6
 msgid "15/07/2016 - Spain"
 msgstr ""
-
-#: radioco/main/templates/tmp_translations/index/timeline.html:7
-#: radioco/main/templates/tmp_translations/index/timeline.html:28
-#: radioco/main/templates/tmp_translations/index/timeline.html:31
-msgid "Spain, A Coruña"
-msgstr "España, La Coruña"
 
 #: radioco/main/templates/tmp_translations/index/timeline.html:8
 msgid "Segundo Encuentro Europeo de Medios Comunitarios"

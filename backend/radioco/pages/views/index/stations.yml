@@ -14,7 +14,7 @@ items:
         url: http://radiocorax.de/
   - name: Cuac FM
     image: cuac-logo.png
-    location: Germany, Halle
+    location: Spain, A Coruña
     description: "Cuac FM is a community radio station that began broadcasting in 1996 on 103.4 FM in A Coruña, Spain. Affiliations: AMARC, ReMC, ReGarLiC"
     resources:
       - type: icon_link
