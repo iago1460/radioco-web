@@ -21,7 +21,7 @@ npm-debug.log
 /backend/static/
 /backend/radioco/main/static/main/css/main.css
 /backend/radioco/main/templates/tmp_translations/
-/.env
+/backend/.env
 /_env
 
 # Files ending in ~

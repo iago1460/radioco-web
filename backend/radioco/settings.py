@@ -151,12 +151,18 @@ STATIC_ROOT = os.path.join(SITE_DIR, 'static')
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(SITE_DIR, 'media')
 
-STATICFILES_FINDERS = (
-    'django.contrib.staticfiles.finders.FileSystemFinder',
-    'django.contrib.staticfiles.finders.AppDirectoriesFinder'
-)
+# STATICFILES_FINDERS = (
+#     'django.contrib.staticfiles.finders.FileSystemFinder',
+#     'django.contrib.staticfiles.finders.AppDirectoriesFinder'
+# )
 
-STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.CachedStaticFilesStorage'
+# STATICFILES_DIRS = (
+#     ("main", os.path.join(SITE_DIR, 'radioco/main/static/main')),
+# )
+
+STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.ManifestStaticFilesStorage'
+
+
 
 YAML_VIEWS_PATH = os.path.join(BASE_DIR, 'radioco/pages/views/')
 
