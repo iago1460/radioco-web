@@ -44,7 +44,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.sitemaps',
-    'radioco.main'
+    "compressor",
+    'radioco.main',
 ]
 
 MIDDLEWARE = [
@@ -155,21 +156,43 @@ STATIC_ROOT = os.path.join(SITE_DIR, 'static')
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(SITE_DIR, 'media')
 
-# STATICFILES_FINDERS = (
-#     'django.contrib.staticfiles.finders.FileSystemFinder',
-#     'django.contrib.staticfiles.finders.AppDirectoriesFinder'
-# )
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    'compressor.finders.CompressorFinder',
+)
 
-# STATICFILES_DIRS = (
-#     ("main", os.path.join(SITE_DIR, 'radioco/main/static/main')),
-# )
+# Compressor settings
+COMPRESS_ENABLED = True
+COMPRESS_OFFLINE = True
+COMPRESS_OUTPUT_DIR = 'MIN'
 
+
+COMPRESS_STORAGE = 'compressor.storage.BrotliCompressorFileStorage'
+WHITENOISE_MAX_AGE = 31536000 
+
+# WhiteNoise should come before compressor to serve compressed files
 STORAGES = {
     "staticfiles": {
         "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
     },
+    "default": {
+        "BACKEND": "django.core.files.storage.FileSystemStorage",
+    }
 }
 
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    # other finders..
+    'compressor.finders.CompressorFinder',
+)
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+# STATICFILES_DIRS = (
+#     ("main", os.path.join(SITE_DIR, 'radioco/main/static/main')),
+# )
 
 
 

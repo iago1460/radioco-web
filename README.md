@@ -19,6 +19,15 @@ To get help just run without arguments:
 ./run
 ```
 
+compress
+```
+rm -rf static
+poetry run python manage.py collectstatic --no-input
+poetry run python manage.py compress
+poetry run python manage.py collectstatic --no-input
+python manage.py runserver --nostatic
+```
+
 ## Features
 
 * Few dependencies
