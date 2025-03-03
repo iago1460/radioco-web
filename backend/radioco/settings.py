@@ -26,12 +26,12 @@ SITE_DIR = BASE_DIR
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ['SECRET_KEY']
+SECRET_KEY = 'afddnzczb^tmq9pf9sst6k((4&4h-6)h+_6ku(ww%!hkrsjp5i)'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = str_to_bool(os.environ.get('DEBUG'))
 if not DEBUG:
-    ALLOWED_HOSTS = [_host.strip() for _host in os.environ['ALLOWED_HOSTS'].split(',')]
+    ALLOWED_HOSTS = ['.radioco.org', '127.0.0.1']
 
 
 # Application definition
@@ -49,13 +49,17 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    "whitenoise.middleware.WhiteNoiseMiddleware",
+    'django.middleware.gzip.GZipMiddleware',
+    'django.middleware.http.ConditionalGetMiddleware',
     # 'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
+    # 'django.middleware.csrf.CsrfViewMiddleware',
     # 'django.contrib.auth.middleware.AuthenticationMiddleware',
     # 'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.locale.LocaleMiddleware',
+    'radioco.main.middleware.HTMLMinifyMiddleware',
 ]
 
 ROOT_URLCONF = 'radioco.urls'
@@ -160,7 +164,12 @@ MEDIA_ROOT = os.path.join(SITE_DIR, 'media')
 #     ("main", os.path.join(SITE_DIR, 'radioco/main/static/main')),
 # )
 
-STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.ManifestStaticFilesStorage'
+STORAGES = {
+    "staticfiles": {
+        "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
+    },
+}
+
 
 
 

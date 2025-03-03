@@ -4,7 +4,7 @@ translatable_fields:
   - description
 items:
   - title: 1. Install docker engine
-    image: docker_logo.jpg
+    image: docker_logo.avif
     description: Docker is a platform to run applications with containers
     resources:
       - type: link
@@ -12,7 +12,7 @@ items:
         icon: fab fa-docker
         url: https://docs.docker.com/install/
   - title: 2. Install web app
-    image: radioco_web.jpg
+    image: radioco_web.avif
     description: The core of the project
     resources:
       - type: link
@@ -20,7 +20,7 @@ items:
         icon: fas fa-podcast
         url: http://django-radio.readthedocs.io/en/latest/installation/install_web_app.html
   - title: 3. Install recorder software
-    image: rpi_grabador.jpg
+    image: rpi_grabador.avif
     description: Automatic audio recorder
     resources:
       - type: link
@@ -28,7 +28,7 @@ items:
         icon: fas fa-microphone
         url: http://django-radio.readthedocs.io/en/latest/installation/install_recorder_program.html
   - title: 4. Optional Integrations
-    image: radiocom.jpg
+    image: radiocom.avif
     description: Add extra functionality with Alexa or a native mobile app
     resources:
       - type: link

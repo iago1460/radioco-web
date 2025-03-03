@@ -13,19 +13,19 @@ FLAG_IMAGE_PATH = 'main/images/flags/'
 
 
 def render_gl_flag(**kwargs):
-    return _render_flag({'title': _('Galician Language'), 'image': FLAG_IMAGE_PATH + 'gl.png'})
+    return _render_flag({'title': _('Galician Language'), 'image': FLAG_IMAGE_PATH + 'gl.avif'})
 
 
 def render_es_flag(**kwargs):
-    return _render_flag({'title': _('Spanish Language'), 'image': FLAG_IMAGE_PATH + 'es.png'})
+    return _render_flag({'title': _('Spanish Language'), 'image': FLAG_IMAGE_PATH + 'es.avif'})
 
 
 def render_de_flag(**kwargs):
-    return _render_flag({'title': _('German Language'), 'image': FLAG_IMAGE_PATH + 'de.png'})
+    return _render_flag({'title': _('German Language'), 'image': FLAG_IMAGE_PATH + 'de.avif'})
 
 
 def render_en_flag(**kwargs):
-    return _render_flag({'title': _('English Language'), 'image': FLAG_IMAGE_PATH + 'gb.png'})
+    return _render_flag({'title': _('English Language'), 'image': FLAG_IMAGE_PATH + 'gb.avif'})
 
 
 def render_link(**kwargs):

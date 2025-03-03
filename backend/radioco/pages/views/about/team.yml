@@ -4,7 +4,7 @@ translatable_fields:
   - description
 items:
   - name: Víctor Tojo
-    image: victor_tojo.jpg
+    image: victor_tojo.avif
     role: Designer
     description: RadioCo trademark design
     resources:
@@ -31,7 +31,7 @@ items:
         icon: fab fa-github
         url: https://github.com/AlexCortinas
   - name: Chema Casanova
-    image: chema_casanova.jpg
+    image: chema_casanova.avif
     role: Developer
     description: Director and contributor
     resources:
@@ -40,7 +40,7 @@ items:
         icon: fab fa-github
         url: https://github.com/txenoo
   - name: Fernando Souto Gonzalez
-    image: fernando_souto.png
+    image: fernando_souto.avif
     role: Developer
     description: Radiocom
     resources:
@@ -58,7 +58,7 @@ items:
         icon: fab fa-github
         url: https://github.com/pablogrela
   - name: Cuac FM people
-    image: cuac_fm.png
+    image: cuac_fm.avif
     role: Feedback
     description: Special mention to @bealume @isalema
     resources:

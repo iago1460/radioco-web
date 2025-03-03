@@ -4,7 +4,7 @@ translatable_fields:
   - location
 items:
   - name: Radio Corax
-    image: corax-solo-logo.png
+    image: corax-solo-logo.avif
     location: Germany, Halle
     description: "Radio Corax is a non-commercial radio available in Halle and in southern Saxony-Anhalt on the VHF frequency 95.9 MHz. Affiliations: BFR, CMFE, AMARC"
     resources:
@@ -13,7 +13,7 @@ items:
         icon: fas fa-globe
         url: http://radiocorax.de/
   - name: Cuac FM
-    image: cuac-logo.png
+    image: cuac-logo.avif
     location: Spain, A Coruña
     description: "Cuac FM is a community radio station that began broadcasting in 1996 on 103.4 FM in A Coruña, Spain. Affiliations: AMARC, ReMC, ReGarLiC"
     resources:
