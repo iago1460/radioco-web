@@ -9,14 +9,12 @@ Usage:
     run [COMMAND] [ARGS...]
 
 Commands:
-    start               Setup a production environment
-    start_dev           Setup a development environment
+    start               Setup and runs a production environment using docker
+    start_dev           Setup and runs development environment using poetry
+    build               Build the Docker image
+    local_css           Extract compiled CSS from docker container
     translate           Generate and compile translations
-
-If an unknown command is specified, it will be passed to docker-compose. e.g:
-    run up -d
-    run logs
-    run exec django bash
+    manage              Run Django management commands in a container
 
 EOF
 }
@@ -24,15 +22,22 @@ EOF
 DOCKER_IMAGE="radioco-web:latest"
 
 
-function start_dev(){
-    # Step 1. Extract the css file
+function build(){
+     docker build -t $DOCKER_IMAGE .
+}
 
+function local_css(){
     # Build the sass container
     docker build --target sass-builder -t sass-builder:latest .
     # Run a container to extract the files
     docker create --name sass-container sass-builder:latest
     docker cp sass-container:/app/css/main.css ./backend/radioco/main/static/main/css/main.css
     docker rm sass-container
+}
+
+function start_dev(){
+    # Step 1. Extract the css file
+    local_css
 
     cd backend
     # Step 2. Install poetry dependencies
@@ -49,27 +54,20 @@ function start_dev(){
     python manage.py runserver --nostatic
 }
 
-
 function start(){
-     docker build -t $DOCKER_IMAGE .
+     build
      docker run --rm -p 8000:8000 $DOCKER_IMAGE
 }
 
-function shell(){
-     docker-compose run --rm django /bin/bash
-}
-
-
 function manage(){
-    docker run --rm --no-deps django python3 manage.py "$@"
+    docker run --rm -v $(pwd)/backend:/app/backend $DOCKER_IMAGE python3 manage.py "$@"
 }
 
 function translate(){
-    docker 
     manage render_translation_vars
-    docker run --rm django python3 manage.py makemessages -l en --no-wrap
-    docker-compose run --rm django python3 manage.py makemessages --all --no-wrap
-    docker-compose run --rm django python3 manage.py compilemessages
+    manage makemessages -l en --no-wrap
+    manage makemessages --all --no-wrap
+    manage compilemessages
 }
 
 
@@ -98,5 +96,7 @@ elif [ "$(type -t $1)" == 'function' ]; then
     shift
     $func "$@"
 else
-    docker-compose "$@"
+    echo "Error: Unknown command '$1'" >&2
+    help
+    exit 1
 fi

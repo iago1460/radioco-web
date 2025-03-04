@@ -16,12 +16,6 @@ RUN sass /app/sass/:/app/css/ --style=compressed
 # Stage 2: Python application
 FROM python:3.13-alpine
 
-## Install system dependencies
-#RUN apt-get update && apt-get install -y --no-install-recommends \
-#    gettext \
-#    && apt-get clean \
-#    && rm -rf /var/lib/apt/lists/*
-
 # Install Poetry
 RUN pip install poetry
 
@@ -43,7 +37,6 @@ COPY ./backend/ /app/backend/
 # Copy compiled CSS from first stage
 COPY --from=sass-builder /app/css/ /app/backend/radioco/main/static/main/css/
 
-
 # Working directory for the application
 WORKDIR /app/backend/
 
@@ -52,6 +45,8 @@ RUN poetry run python manage.py collectstatic --no-input
 RUN poetry run python manage.py compress
 RUN poetry run python manage.py collectstatic --no-input
 
+# Add gettext for translations
+RUN apk add --no-cache gettext
 
 # Command to run the application
 CMD ["gunicorn", "radioco.wsgi:application", "--bind", "0.0.0.0:8000", "--workers", "2"]

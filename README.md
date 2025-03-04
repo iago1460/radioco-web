@@ -1,53 +1,30 @@
 # Official RadioCo website
 
-Port of a existing wordpress project, so don't expect clean code
+A Django-based web application for RadioCo, ported from a legacy WordPress project.
+
+## Overview
+This application provides a streamlined, database-free website using Django, YAML for content storage, and Sass for styling.
+
+## Features
+* No Database Required - Content is stored in YAML files
+* Internationalization Support - Multiple language support using Django's i18n
+* Responsive Design - Built with modern CSS using Sass
+* Docker Support - Easy deployment with containerization
+* Minimal Dependencies - Simple architecture with few external requirements 
 
 ## Getting Started
 
-Installation should be pretty straightforward:
+### Prerequisites
+* bash (for running the setup script)
+* Docker (for production/containerized deployment)
 
-### Prerequisites and Installation
-
-Have docker installed, change your .env variables, then run:
-
+```bash
+    ./run help
 ```
-./run start_dev
-```
-
-To get help just run without arguments:
-```
-./run
-```
-
-compress
-```
-rm -rf static
-poetry run python manage.py collectstatic --no-input
-poetry run python manage.py compress
-poetry run python manage.py collectstatic --no-input
-python manage.py runserver --nostatic
-```
-
-## Features
-
-* Few dependencies
-* No database
-* Internationalization Support
-
-
-## Built With
-
-* [Python 3](https://www.python.org) - Programming language used
-* [Django 2](https://www.djangoproject.com/) - The web framework used
-* [Sass](https://sass-lang.com/) - Used to generate CSS
-* [Yaml](http://yaml.org/) - Used to store data
 
 ## Contributing
 
-Any help is welcome.
-
-Help us to [translate](https://poeditor.com/join/project/wc3P8dCind)!
-No need to install or setup anything, just follow [this link](https://poeditor.com/join/project/wc3P8dCind).
+Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## Authors
 
