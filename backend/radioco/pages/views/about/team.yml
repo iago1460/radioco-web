@@ -13,7 +13,7 @@ items:
         icon: fas fa-globe
         url: http://victortojo.com/
   - name: Stefan Walluhn
-    image: stefan_walluhn.jpeg
+    image: stefan_walluhn.avif
     role: Radio Corax Developer
     description: Contributor
     resources:
@@ -22,7 +22,7 @@ items:
         icon: fab fa-github
         url: https://github.com/stefan-walluhn
   - name: Álex Cortiñas
-    image: alex_cortinas.jpeg
+    image: alex_cortinas.avif
     role: Developer
     description: Contributor
     resources:
@@ -49,7 +49,7 @@ items:
         icon: fab fa-github
         url: https://github.com/ficiverson
   - name: Pablo Grela
-    image: pablo_grela.jpeg
+    image: pablo_grela.avif
     role: Developer
     description: Radiocom integration
     resources:
@@ -67,7 +67,7 @@ items:
         icon: fas fa-globe
         url: https://cuacfm.org/
   - name: Iago Veloso
-    image: iago_veloso.jpeg
+    image: iago_veloso.avif
     role: Developer
     description: RadioCo Author
     resources:

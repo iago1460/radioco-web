@@ -21,27 +21,38 @@ If an unknown command is specified, it will be passed to docker-compose. e.g:
 EOF
 }
 
-STAGING_COMPOSE_FILES="-f docker-compose.yml -f docker-compose.staging.yml"
-COMPOSE_FILES=""
+DOCKER_IMAGE="radioco-web:latest"
+
 
 function start_dev(){
-     if [ ! -f ".env" ]; then
-         cp -v .sample.env .env
-         echo "Creating .env file. Update your environment variables and try again."
-         exit 0
-     fi
-     export_file_vars .env
-     docker-compose $COMPOSE_FILES down --remove-orphans
-     docker-compose $COMPOSE_FILES build
-     docker-compose $COMPOSE_FILES up -d
-     echo "RadioCo is running at http://127.0.0.1:${PORT_BACKEND}"
+    # Step 1. Extract the css file
+
+    # Build the sass container
+    docker build --target sass-builder -t sass-builder:latest .
+    # Run a container to extract the files
+    docker create --name sass-container sass-builder:latest
+    docker cp sass-container:/app/css/main.css ./backend/radioco/main/static/main/css/main.css
+    docker rm sass-container
+
+    cd backend
+    # Step 2. Install poetry dependencies
+    poetry install
+
+    # Step 3. Start the development server
+    rm -rf static
+    poetry run python manage.py collectstatic --no-input
+    poetry run python manage.py compress
+    poetry run python manage.py collectstatic --no-input
+
+    # Step 4. Start the development server
+    echo "Starting the development server"
+    python manage.py runserver --nostatic
 }
 
 
 function start(){
-     docker-compose run --rm sass node-sass scss/ -o css/
-     COMPOSE_FILES=$STAGING_COMPOSE_FILES
-     start_dev
+     docker build -t $DOCKER_IMAGE .
+     docker run --rm -p 8000:8000 $DOCKER_IMAGE
 }
 
 function shell(){
@@ -50,12 +61,13 @@ function shell(){
 
 
 function manage(){
-    docker-compose run --rm --no-deps django python3 manage.py "$@"
+    docker run --rm --no-deps django python3 manage.py "$@"
 }
 
 function translate(){
+    docker 
     manage render_translation_vars
-    docker-compose run --rm django python3 manage.py makemessages -l en --no-wrap
+    docker run --rm django python3 manage.py makemessages -l en --no-wrap
     docker-compose run --rm django python3 manage.py makemessages --all --no-wrap
     docker-compose run --rm django python3 manage.py compilemessages
 }

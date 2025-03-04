@@ -25,14 +25,11 @@ SITE_DIR = BASE_DIR
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'afddnzczb^tmq9pf9sst6k((4&4h-6)h+_6ku(ww%!hkrsjp5i)'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = str_to_bool(os.environ.get('DEBUG'))
 if not DEBUG:
-    ALLOWED_HOSTS = ['.radioco.org', '127.0.0.1']
-
+    ALLOWED_HOSTS = os.getenv("DJANGO_ALLOWED_HOSTS", ".radioco.org,localhost,127.0.0.1,[::1]").split(",")
 
 # Application definition
 
@@ -40,8 +37,6 @@ INSTALLED_APPS = [
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'corsheaders',
-    'django.contrib.sessions',
-    'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.sitemaps',
     "compressor",
@@ -216,9 +211,9 @@ YAML_VIEWS_PATH = os.path.join(BASE_DIR, 'radioco/pages/views/')
 if not DEBUG:
     # Enabling cache
     MIDDLEWARE = [
-        'django.middleware.cache.UpdateCacheMiddleware', # First
+        # 'django.middleware.cache.UpdateCacheMiddleware', # First
         *MIDDLEWARE,
-        'django.middleware.cache.FetchFromCacheMiddleware' # Last
+        # 'django.middleware.cache.FetchFromCacheMiddleware' # Last
     ]
     CACHE_MIDDLEWARE_SECONDS = 60 * 60 * 24  # 1 day
     TEMPLATES[0]['OPTIONS']['loaders'] = [('django.template.loaders.cached.Loader', TEMPLATES[0]['OPTIONS']['loaders'])]
