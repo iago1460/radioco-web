@@ -93,6 +93,7 @@ CONTENT_SECURITY_POLICY = {
 
 CORS_ALLOWED_ORIGINS = [
     "https://radioco.org",
+    "https://www.radioco.org",
     "http://localhost:8000",
     "http://127.0.0.1:8000",
 ]
@@ -204,6 +205,9 @@ COMPRESS_OUTPUT_DIR = 'MIN'
 
 COMPRESS_STORAGE = 'compressor.storage.BrotliCompressorFileStorage'
 WHITENOISE_MAX_AGE = 31536000 
+WHITENOISE_MIMETYPES = {
+    '.css': 'text/css',
+}
 
 # WhiteNoise should come before compressor to serve compressed files
 STORAGES = {
