@@ -12,6 +12,7 @@ pyyaml = "^6.0.2"
 django-cors-headers = "^4.7.0"
 whitenoise = {version = "^6.6.0", extras = ["brotli"]}
 django-compressor = "^4.4"
+django-csp = "4.0b4"
 gunicorn = "^23.0.0"
 
 [build-system]

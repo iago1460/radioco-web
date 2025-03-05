@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.sitemaps',
     "compressor",
+    "csp",
     'radioco.main',
 ]
 
@@ -57,8 +58,38 @@ MIDDLEWARE = [
     # 'django.contrib.messages.middleware.MessageMiddleware',
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'radioco.main.middleware.HTMLMinifyMiddleware',
+    'csp.middleware.CSPMiddleware',
 ]
+from csp.constants import NONE, SELF, UNSAFE_INLINE, UNSAFE_EVAL
 
+CONTENT_SECURITY_POLICY = {
+    "EXCLUDE_URL_PREFIXES": ["/excluded-path/"],
+    "DIRECTIVES": {
+        "default-src": [NONE],
+        "script-src": [
+            SELF, 
+            UNSAFE_INLINE, 
+            UNSAFE_EVAL,
+            "https://code.jquery.com",
+            "https://cdn.jsdelivr.net",
+            "https://use.fontawesome.com",
+            "https://maxcdn.bootstrapcdn.com",
+        ],
+        "style-src": [
+            SELF, 
+            UNSAFE_INLINE,
+            "https://fonts.googleapis.com",
+            "https://maxcdn.bootstrapcdn.com",
+        ],
+        "font-src": [
+            SELF,
+            "https://fonts.gstatic.com",
+            "https://maxcdn.bootstrapcdn.com",
+            "https://use.fontawesome.com",
+        ],
+        "img-src": [SELF, "data:"],
+    },
+}
 
 CORS_ALLOWED_ORIGINS = [
     "https://radioco.org",

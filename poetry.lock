@@ -215,6 +215,27 @@ asgiref = ">=3.6"
 django = ">=4.2"
 
 [[package]]
+name = "django-csp"
+version = "4.0b4"
+description = "Django Content Security Policy support."
+optional = false
+python-versions = "*"
+files = [
+    {file = "django_csp-4.0b4-py3-none-any.whl", hash = "sha256:492df5c5ddbbcb2068a52888f09d24e1ef6792742b52c2d1c4a1fe4171f1edcd"},
+    {file = "django_csp-4.0b4.tar.gz", hash = "sha256:5e5d9a08aed6060f7d17f60c395a45f24c02ad4c81677213406ec1937d3e7f4a"},
+]
+
+[package.dependencies]
+django = ">=4.2"
+packaging = "*"
+
+[package.extras]
+dev = ["django-stubs[compatible-mypy]", "jinja2 (>=2.9.6)", "mypy", "pre-commit", "pytest", "pytest-cov", "pytest-django", "pytest-ruff", "sphinx", "sphinx-rtd-theme", "tox", "tox-gh-actions", "types-setuptools"]
+jinja2 = ["jinja2 (>=2.9.6)"]
+tests = ["jinja2 (>=2.9.6)", "pytest", "pytest-cov", "pytest-django", "pytest-ruff"]
+typing = ["django-stubs[compatible-mypy]", "jinja2 (>=2.9.6)", "mypy", "pytest", "pytest-django", "types-setuptools"]
+
+[[package]]
 name = "gunicorn"
 version = "23.0.0"
 description = "WSGI HTTP Server for UNIX"
@@ -466,4 +487,4 @@ brotli = ["brotli"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "f039d0d7f66caaaed31339787ae8bf1cfe72986a8e586c52471fccd69d687f5a"
+content-hash = "a88db1ef8325ddac396cef1d01734cb887dff476aa8cf33c2fe3d19ab1d86b16"
