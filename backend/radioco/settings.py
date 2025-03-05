@@ -49,10 +49,10 @@ MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
     "whitenoise.middleware.WhiteNoiseMiddleware",
     'django.middleware.gzip.GZipMiddleware',
-    'django.middleware.http.ConditionalGetMiddleware',
     # 'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
+    'radioco.main.middleware.CacheControlMiddleware',
     # 'django.middleware.csrf.CsrfViewMiddleware',
     # 'django.contrib.auth.middleware.AuthenticationMiddleware',
     # 'django.contrib.messages.middleware.MessageMiddleware',
@@ -250,8 +250,8 @@ if not DEBUG:
         *MIDDLEWARE,
         # 'django.middleware.cache.FetchFromCacheMiddleware' # Last
     ]
-    CACHE_MIDDLEWARE_SECONDS = 60 * 60 * 24  # 1 day
-    # TEMPLATES[0]['OPTIONS']['loaders'] = [('django.template.loaders.cached.Loader', TEMPLATES[0]['OPTIONS']['loaders'])] # FIXME: This could cause weird behavior
+    CACHE_MIDDLEWARE_SECONDS = 30  # 30 seconds
+    TEMPLATES[0]['OPTIONS']['loaders'] = [('django.template.loaders.cached.Loader', TEMPLATES[0]['OPTIONS']['loaders'])] # FIXME: This could cause weird behavior
     CACHES = {
         'default': {
             'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',

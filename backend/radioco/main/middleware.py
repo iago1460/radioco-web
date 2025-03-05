@@ -61,3 +61,29 @@ class HTMLMinifyMiddleware:
             response['Content-Length'] = len(response.content)
 
         return response
+
+
+class CacheControlMiddleware:
+    """
+    Middleware that adds Cache-Control headers with 30 seconds max-age
+    to successful GET responses, except for static and media files.
+    """
+    def __init__(self, get_response):
+        self.get_response = get_response
+        self.excluded_paths = ['/static/', '/media/']
+        self.cache_seconds = getattr(settings, 'CACHE_MIDDLEWARE_SECONDS', 0)
+
+
+    def __call__(self, request):
+        response = self.get_response(request)
+        
+        # Check if path should be excluded
+        path = request.path
+        if any(excluded in path for excluded in self.excluded_paths):
+            return response
+        
+        # Only add cache headers to successful GET responses
+        if request.method == 'GET' and 200 <= response.status_code < 300:
+            response['Cache-Control'] = f'max-age={self.cache_seconds}, public'
+
+        return response
