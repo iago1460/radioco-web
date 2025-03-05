@@ -251,7 +251,7 @@ if not DEBUG:
         # 'django.middleware.cache.FetchFromCacheMiddleware' # Last
     ]
     CACHE_MIDDLEWARE_SECONDS = 60 * 60 * 24  # 1 day
-    TEMPLATES[0]['OPTIONS']['loaders'] = [('django.template.loaders.cached.Loader', TEMPLATES[0]['OPTIONS']['loaders'])]
+    # TEMPLATES[0]['OPTIONS']['loaders'] = [('django.template.loaders.cached.Loader', TEMPLATES[0]['OPTIONS']['loaders'])] # FIXME: This could cause weird behavior
     CACHES = {
         'default': {
             'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',
