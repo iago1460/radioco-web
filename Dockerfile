@@ -43,7 +43,6 @@ WORKDIR /app/backend/
 # Prepare static files
 RUN poetry run python manage.py collectstatic --no-input
 RUN poetry run python manage.py compress
-RUN poetry run python manage.py collectstatic --no-input
 
 # Add gettext for translations
 RUN apk add --no-cache gettext
